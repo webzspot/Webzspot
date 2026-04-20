@@ -5,6 +5,7 @@ import AboutSection from "./components/AboutSection";
 import Services from "./components/Services";
 import OurTeam from "./components/OurTeam";
 import OurPricingPlans from "./components/OurPricingPlans";
+import Faq from "./components/Faq"
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
       <Services />
       <OurTeam />
       <OurPricingPlans />
+      <Faq />
     </>
   );
 };
