@@ -381,9 +381,6 @@ const Hero = () => {
              </div>
             </div>
           </div>
-
-         
- 
           {/* Second image */}
           <div
             className="overflow-hidden rounded-4xl flex-1"
