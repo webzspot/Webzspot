@@ -51,7 +51,28 @@ const Services = () => {
               alt="How We Work Image"
               className="rounded-3xl object-cover object-center rounded-br-3xl h-80 w-full"
             />
-            <div className="bg-white h-36 w-36 absolute bottom-0 right-0 rounded-tl-3xl"></div>
+            <div className="absolute bottom-0 right-0 flex items-end">
+              <div className="">
+                <svg
+                className="w-10 h-10 scale-x-[-1] scale-y-[1] -mr-2 "
+                viewBox="0 0 100 100"
+                preserveAspectRatio="none"
+              >
+                <path d="M0,0 C40,0 0,60 100,100 L0,100 Z" fill="white" />
+              </svg>
+              </div>
+              <div className="flex flex-col items-end">
+                <svg
+                  className="w-10 h-10 scale-x-[-1] scale-y-[1] -mr-2 -mb-1"
+                  viewBox="0 0 100 100"
+                  preserveAspectRatio="none"
+                >
+                  <path d="M0,0 C40,0 0,60 100,100 L0,100 Z" fill="white" />
+                </svg>
+                <div className="bg-white h-28 w-40 rounded-tl-3xl"></div>
+              </div>
+              
+            </div>
           </div>
         </div>
       </div>
