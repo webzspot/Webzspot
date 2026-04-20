@@ -382,14 +382,7 @@ const Hero = () => {
             </div>
           </div>
 
-         <iframe 
-  src="https://form-saas.netlify.app/public/form/untitled-form-1775559665275"
-  title="Untitled Form 1775559665275"
-  width="100%"
-  height="700"
-  style={{ border: "none", borderRadius: "12px" }}
-  allow="clipboard-write">
-</iframe>
+         
  
           {/* Second image */}
           <div
