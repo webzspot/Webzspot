@@ -1,5 +1,4 @@
 import React, { useRef } from "react";
-import imageHowWeWork from "../assets/Images/How_we_Work_Image.avif";
 import { useScroll, motion, useTransform } from "framer-motion";
 import { FaCircleDot, FaRegCircleDot } from "react-icons/fa6";
 
@@ -33,7 +32,7 @@ const Services = () => {
   return (
     <div
       ref={ref}
-      className="container max-w-6xl mx-auto p-4 grid lg:grid-cols-2 mt-20 relative"
+      className="container max-w-6xl mx-auto p-4 grid lg:grid-cols-2 mt-20 relative lg:pl-20"
     >
       {/* left content */}
       <div className="h-fit lg:sticky top-32 bottom-0 self-start">
@@ -47,7 +46,7 @@ const Services = () => {
           {/* Left Image*/}
           <div className="relative">
             <img
-              src={imageHowWeWork}
+              src="https://framerusercontent.com/images/VSxqLrfRMs8XEbT1SuK60xq3aKI.jpeg?width=1200&height=1200"
               alt="How We Work Image"
               className="rounded-3xl object-cover object-center rounded-br-3xl h-80 w-full"
             />

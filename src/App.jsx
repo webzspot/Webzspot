@@ -6,6 +6,8 @@ import Services from "./components/Services";
 import OurTeam from "./components/OurTeam";
 import OurPricingPlans from "./components/OurPricingPlans";
 import Faq from "./components/Faq"
+import OurInsights from "./components/OurInsights";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -17,6 +19,8 @@ const App = () => {
       <OurTeam />
       <OurPricingPlans />
       <Faq />
+      <OurInsights/>
+      <Footer/>
     </>
   );
 };
