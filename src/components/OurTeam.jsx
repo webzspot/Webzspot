@@ -35,7 +35,7 @@ const OurTeam = () => {
     },
   ];
   return (
-    <div className="container max-w-6xl mx-auto p-4 mt-24 relative lg:pl-20">
+    <div className="container max-w-7xl mx-auto p-4 mt-24 relative">
       <div className="mb-10">
         <p className="text-orange-400">[ How We team ]</p>
         <h2 className="text-2xl lg:text-5xl font-semibold">
@@ -49,13 +49,13 @@ const OurTeam = () => {
             <img
               src={data.image}
               alt="team member photo"
-              className="rounded-3xl object-cover object-center w-full h-full"
+              className="rounded-4xl object-cover object-center w-full h-full"
             />
-            {/* curved corner */}
+            {/* curved corner left*/}
             <div className="absolute bottom-0 flex items-end">
               <div>
                 <svg
-                  className="w-12 h-12 -ml-2"
+                  className="w-10 h-10 -ml-2"
                   viewBox="0 0 100 100"
                   preserveAspectRatio="none"
                 >
@@ -70,9 +70,9 @@ const OurTeam = () => {
                   </span>
                 </div>
               </div>
-              {/* curved corner */}
+              {/* curved corner bottom*/}
               <svg
-                className="w-12 h-12 -ml-2"
+                className="w-10 h-10 -ml-2"
                 viewBox="0 0 100 100"
                 preserveAspectRatio="none"
               >

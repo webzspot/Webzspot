@@ -32,7 +32,7 @@ const Services = () => {
   return (
     <div
       ref={ref}
-      className="container max-w-6xl mx-auto p-4 grid lg:grid-cols-2 mt-20 relative lg:pl-20"
+      className="container max-w-7xl mx-auto p-4 grid lg:grid-cols-2 mt-10 relative"
     >
       {/* left content */}
       <div className="h-fit lg:sticky top-32 bottom-0 self-start">
@@ -48,9 +48,10 @@ const Services = () => {
             <img
               src="https://framerusercontent.com/images/VSxqLrfRMs8XEbT1SuK60xq3aKI.jpeg?width=1200&height=1200"
               alt="How We Work Image"
-              className="rounded-3xl object-cover object-center rounded-br-3xl h-80 w-full"
+              className="rounded-4xl object-cover object-center rounded-br-3xl h-80 w-full"
             />
             <div className="absolute bottom-0 right-0 flex items-end">
+              {/* curved corner bottom*/}
               <div className="">
                 <svg
                 className="w-10 h-10 scale-x-[-1] scale-y-[1] -mr-2 "
@@ -61,8 +62,9 @@ const Services = () => {
               </svg>
               </div>
               <div className="flex flex-col items-end">
+                {/* curved corner right  */}
                 <svg
-                  className="w-10 h-10 scale-x-[-1] scale-y-[1] -mr-2 -mb-1"
+                  className="w-10 h-10 scale-x-[-1] scale-y-[1] -mr-2"
                   viewBox="0 0 100 100"
                   preserveAspectRatio="none"
                 >

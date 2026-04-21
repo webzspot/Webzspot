@@ -21,7 +21,7 @@ const OurInsights = () => {
     },
   ];
   return (
-    <div className="container max-w-6xl mx-auto p-4 mt-20 lg:pl-20">
+    <div className="container max-w-7xl mx-auto p-4 mt-20">
       {/* Heading */}
       <div>
         <p className="text-orange-400">[ Our Insights ]</p>
