@@ -37,7 +37,7 @@ const OurTeam = () => {
   return (
     <div className="container max-w-7xl mx-auto p-4 mt-24 relative">
       <div className="mb-10">
-        <p className="text-orange-400">[ How We team ]</p>
+        <p className="text-orange-400">{"{ How We team }"}</p>
         <h2 className="text-2xl lg:text-5xl font-semibold">
           CREATIVE PROFESSIONALS AT YOUR SERVICE
         </h2>

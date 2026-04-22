@@ -37,7 +37,7 @@ const Services = () => {
       {/* left content */}
       <div className="h-fit lg:sticky top-32 bottom-0 self-start">
         <div>
-          <p className="text-orange-400">[ How We Work ]</p>
+          <p className="text-orange-400">{"{ How We Work }"}</p>
           <h2 className="text-2xl lg:text-5xl font-semibold">
             STRATEGIC STEPS TO IMPACTFUL RESULTS
           </h2>

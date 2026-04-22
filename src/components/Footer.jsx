@@ -1,30 +1,17 @@
 import React from "react";
 
 const Footer = () => {
+  
   const navLink = [
-    {
-        link:"#",
-        name:"Home",
-    },{
-        link:"#",
-        name:"About",
-    },{
-        link:"#",
-        name:"Services",
-    },{
-        link:"#",
-        name:"Projects",
-    },{
-        link:"#",
-        name:"Blog",
-    },{
-        link:"#",
-        name:"Pricing",
-    },{
-        link:"#",
-        name:"Contact",
-    },
+    {link:"#",name:"Home",},
+    {link:"#",name:"About",},
+    {link:"#",name:"Services",},
+    {link:"#",name:"Projects",},
+    {link:"#",name:"Blog",},
+    {link:"#",name:"Pricing",},
+    {link:"#",name:"Contact",},
   ];
+
   return (
     <div className="bg-[#F2F2F2] p-4 mt-20 pt-10">
       <div className="grid lg:grid-cols-2 max-w-6xl mx-auto pt-8 pb-4 border-b-2">

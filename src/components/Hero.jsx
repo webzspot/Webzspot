@@ -2,7 +2,7 @@ import React, { useRef, useState, useCallback } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { FiPlus, FiArrowRight } from "react-icons/fi";
 import { FaFacebook, FaInstagram, FaBehance } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaBars, FaX, FaXTwitter } from "react-icons/fa6";
 
 /* ── Each service has its own preview image + tilt ── */
 const services = [
@@ -108,7 +108,9 @@ const Hero = () => {
   const heroOpacity = useTransform(scrollYProgress, [0.7, 1],  [1, 0]);
   const bgScale     = useTransform(scrollYProgress, [0, 1],    [1, 1.1]);
 
-  const videoUrl = "https://www.w3schools.com/html/mov_bbb.mp4";
+  const videoUrl = "https://framerusercontent.com/assets/7YBK8amA6z135CX8nogC5hVIKA.mp4";
+
+  const logo = "https://ik.imagekit.io/psltlu4ds/Webzspot/Webzspot/Logo%20Assets/Live/whitelogo-new.png?updatedAt=1721976201909"
 
   const teamMembers = [
     "https://randomuser.me/api/portraits/men/32.jpg",
@@ -124,6 +126,28 @@ const Hero = () => {
   const handleMouseMove = useCallback((e) => {
     setMouse({ x: e.clientX, y: e.clientY });
   }, []);
+
+
+  // Menu Bar links 
+
+  const menuBarLink =[
+    {link:"#",name:"Home",},
+    {link:"#",name:"About",},
+    {link:"#",name:"Services",},
+    {link:"#",name:"Projects",},
+    {link:"#",name:"Blog",},
+    {link:"#",name:"Pricing",},
+    // contact page is placed separate
+  ];
+
+  // MenuBar state
+
+  const [isVisible,setIsvisible] = useState(false)
+
+  const handleMenuBar = ()=>{
+    setIsvisible(prev=>!prev)
+  }
+
 
   return (
     <div className="font-sans">
@@ -142,19 +166,23 @@ const Hero = () => {
 
       {/* ── SIDEBAR (desktop) ── */}
       <div className="hidden md:flex fixed left-0 top-0 h-full w-[72px] bg-[#1a1a1a] z-50 flex-col items-center justify-between py-6">
-        <button className="w-10 h-10 rounded-full border border-white/30 flex flex-col items-center justify-center gap-[5px]">
-          <span className="w-5 h-[1.5px] bg-white" />
-          <span className="w-5 h-[1.5px] bg-white" />
+        <button className="w-10 h-10 rounded-full border border-white/30 flex flex-col items-center justify-center gap-[5px]"
+            onClick={()=>handleMenuBar()}>
+          {!isVisible ?<span className="text-white"><FaBars/></span>:<span className="text-white"><FaX/></span>}
+          {/* {!isVisible && <span className="w-5 h-[1.5px] bg-white" />} */}
         </button>
         <div className="text-white text-[10px] tracking-[0.3em] font-semibold" style={{ writingMode: "vertical-rl", transform: "rotate(180deg)" }}>
-          BRIGHTEDGE
+          WEBZSPOT
         </div>
-        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+        <div className="-rotate-z-90">
+          <img src={logo} alt="webzspot logo" />
+        </div>
+        {/* <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
           <line x1="14" y1="2"  x2="14" y2="26" stroke="white" strokeWidth="2" strokeLinecap="round"/>
           <line x1="2"  y1="14" x2="26" y2="14" stroke="white" strokeWidth="2" strokeLinecap="round"/>
           <line x1="5"  y1="5"  x2="23" y2="23" stroke="white" strokeWidth="2" strokeLinecap="round"/>
           <line x1="23" y1="5"  x2="5"  y2="23" stroke="white" strokeWidth="2" strokeLinecap="round"/>
-        </svg>
+        </svg> */}
         <div className="flex flex-col items-center gap-5">
           <FaFacebook  size={16} className="text-white/70 hover:text-white cursor-pointer transition-colors" />
           <FaXTwitter  size={16} className="text-white/70 hover:text-white cursor-pointer transition-colors" />
@@ -162,15 +190,39 @@ const Hero = () => {
           <FaBehance   size={16} className="text-white/70 hover:text-white cursor-pointer transition-colors" />
         </div>
       </div>
+      {/* menubar */}
+      {isVisible && <div className="bg-black/70 lg:ml-18 fixed top-0 z-50 w-full ">
+        <div className="bg-white lg:w-1/4 h-screen flex flex-col justify-between">
+          <div className="flex flex-col pt-15 gap-10">
+            {menuBarLink.map((data,i)=>(
+              <div className="py-2 px-10 border-b border-gray-300 font-light text-2xl">
+                <a href="#">{data.name}</a>
+              </div>
+            ))}
+          </div>
+          <div>
+            <div className="py-2 px-5 my-3 mx-5 border-t border-gray-300 font-light text-2xl">
+                <a href="#">Contact</a>
+              </div>
+          </div>
+      </div>
+      </div>}
 
       {/* ── MOBILE TOP-BAR ── */}
       <div className="md:hidden fixed top-0 left-0 right-0 h-14 bg-[#1a1a1a] z-50 flex items-center justify-between px-5">
-        <span className="text-white text-xs tracking-[0.3em] font-semibold">BRIGHTEDGE</span>
-        <button className="flex flex-col gap-[5px]">
-          <span className="w-6 h-[1.5px] bg-white" />
-          <span className="w-6 h-[1.5px] bg-white" />
+        <div className="flex gap-2">
+          <img src={logo} alt="webzspot logo" className="w-10 h-5"/>
+          <span className="text-white text-xs tracking-[0.3em] font-semibold">WEBZSPOT</span>
+        </div>
+        
+        <button className="flex flex-col gap-[5px]" onClick={()=>handleMenuBar()}>
+          {!isVisible ?<span className="text-white"><FaBars/></span>:<span className="text-white"><FaX/></span>}
         </button>
       </div>
+
+      {/* Menu Bar  */}
+
+      
 
       {/* ── HERO SECTION ── */}
       <section ref={ref} className="h-[200vh] relative md:ml-[72px] mt-14 md:mt-0" style={{ zIndex: 10 }}>

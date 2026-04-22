@@ -24,7 +24,7 @@ const OurInsights = () => {
     <div className="container max-w-7xl mx-auto p-4 mt-20">
       {/* Heading */}
       <div>
-        <p className="text-orange-400">[ Our Insights ]</p>
+        <p className="text-orange-400">{"{ Our Insights }"}</p>
         <h2 className="text-2xl lg:text-5xl font-semibold">
           STAY AHEAD WITH THE LATEST IN DIGITAL MARKETING
         </h2>
