@@ -215,8 +215,8 @@ const Hero = () => {
           <span className="text-white text-xs tracking-[0.3em] font-semibold">WEBZSPOT</span>
         </div>
         
-        <button className="flex flex-col gap-[5px]" onClick={()=>handleMenuBar()}>
-          {!isVisible ?<span className="text-white"><FaBars/></span>:<span className="text-white"><FaX/></span>}
+        <button className="flex flex-col p-2 bg-white rounded-full" onClick={()=>handleMenuBar()}>
+          {!isVisible ?<span className="text-black"><FaBars/></span>:<span className="text-red"><FaX/></span>}
         </button>
       </div>
 
