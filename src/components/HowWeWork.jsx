@@ -37,7 +37,7 @@ const Services = () => {
       {/* left content */}
       <div className="h-fit lg:sticky top-32 bottom-0 self-start">
         <div>
-          <p className="text-orange-400">{"{ How We Work }"}</p>
+          <p className="text-[#07446F]">{"{ How We Work }"}</p>
           <h2 className="text-2xl lg:text-5xl font-semibold">
             STRATEGIC STEPS TO IMPACTFUL RESULTS
           </h2>
@@ -46,7 +46,7 @@ const Services = () => {
           {/* Left Image*/}
           <div className="relative">
             <img
-              src="https://framerusercontent.com/images/VSxqLrfRMs8XEbT1SuK60xq3aKI.jpeg?width=1200&height=1200"
+              src="https://ik.imagekit.io/psltlu4ds/Webzspot/Webzspot/Image%20Assets/How-to-create-a-UX-research-plan_Blog-hero_800x500@x2_FA.jpg?updatedAt=1720182954988"
               alt="How We Work Image"
               className="rounded-4xl object-cover object-center rounded-br-3xl h-80 w-full"
             />
@@ -83,7 +83,7 @@ const Services = () => {
         <div className="absolute left-2.5 top-2 w-0.5 h-full bg-gray-200">
           <motion.div
             style={{ scaleY }}
-            className="absolute top-0 left-0 w-full h-full origin-top bg-orange-500"
+            className="absolute top-0 left-0 w-full h-full origin-top bg-[#07446F]"
           />
         </div>
         <div className="flex flex-col gap-16">
@@ -97,7 +97,7 @@ const Services = () => {
               </div>
               <div className="flex flex-wrap lg:flex-nowrap gap-1 ml-10">
                 {/* Step label */}
-                <p className="text-5xl lg:text-7xl font-extrabold text-orange-500 mr-2">
+                <p className="text-5xl lg:text-7xl font-extrabold text-[#07446F] mr-2">
                   {i + 1}
                 </p>
                 <div>

@@ -151,8 +151,3 @@ textarea {
 textarea {
   min-height: 120px;
 }
-
-button:hover {
-  background: #28a745;
-  /* green */
-} 
