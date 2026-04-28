@@ -10,6 +10,7 @@ import OurInsights from "./components/OurInsights";
 import Footer from "./components/Footer";
 import Review from "./components/Review";
 import Contact from "./components/Contact";
+import ClientsSection from "./components/ClientsSection";
 
 const App = () => {
   return (
@@ -18,11 +19,12 @@ const App = () => {
       <AboutSection />
       <FeaturedProjects />
       <Services />
-      <OurTeam />
-      <OurPricingPlans />
+      {/* <OurTeam /> */}
+      {/* <OurPricingPlans /> */}
+      <ClientsSection />
       <Review />
       <Faq />
-      <OurInsights />
+      {/* <OurInsights /> */}
       <Contact />
       <Footer />
     </>
