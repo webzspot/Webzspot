@@ -93,7 +93,7 @@ const Contact = () => {
     const email = "client@webzspot.com";
 
     return (
-        <section className="relative w-full min-h-screen overflow-hidden text-slate-900">
+        <section id="contact" className="relative w-full min-h-screen overflow-hidden text-slate-900">
 
             {/* 🌈 Background Gradient */}
             <div className="absolute inset-0 bg-gradient-to-br from-sky-100 via-blue-100 to-indigo-200" />

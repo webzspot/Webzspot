@@ -1,6 +1,6 @@
 export default function ClientsSection() {
   return (
-    <section>
+    <section id="clients">
 
       {/* ===== HEADER ===== */}
       <div className="container mx-auto">

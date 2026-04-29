@@ -42,7 +42,7 @@ const services = [
 
 /* ── Cursor-following image ── */
 const FloatingImage = ({ src, x, y, visible, rotation }) => (
-  <motion.div
+  <motion.div 
     className="pointer-events-none fixed z-[999] w-52 h-36 md:w-64 md:h-44 rounded-2xl overflow-hidden shadow-2xl"
     style={{ top: 0, left: 0, translateX: "-50%", translateY: "-50%" }}
     animate={{
@@ -148,12 +148,11 @@ const Hero = () => {
   // Menu Bar links
 
   const menuBarLink = [
-    { link: "#", name: "Home" },
-    { link: "#", name: "About Us" },
-    { link: "#", name: "Our Services" },
-    { link: "#", name: "Our Clients" },
-    { link: "#", name: "Contact Us" },
-    // contact page is placed separate
+    {id:1,link:"#",name:"Home",},
+    {id:2,link:"#aboutUs",name:"About Us",},
+    {id:3,link:"#services",name:"Services",},
+    {id:4,link:"#clients",name:"Clients",},
+    {id:5,link:"#contact",name:"Contact Us",},
   ];
 
   // MenuBar state
@@ -181,15 +180,15 @@ const Hero = () => {
       {/* ── SIDEBAR (desktop) ── */}
       <div className="hidden lg:flex fixed left-0 top-0 h-full w-[72px] bg-[#07446F] z-50 flex-col items-center justify-between py-6">
         <button
-          className="w-10 h-10 rounded-full border border-white/30 flex flex-col items-center justify-center gap-[5px]"
+          className="w-10 h-10 rounded-full border border-white/30 flex flex-col items-center justify-center gap-[5px] bg-white"
           onClick={() => handleMenuBar()}
         >
           {!isVisible ? (
-            <span className="text-white">
+            <span>
               <FaBars />
             </span>
           ) : (
-            <span className="text-white">
+            <span>
               <FaX />
             </span>
           )}
@@ -235,8 +234,8 @@ const Hero = () => {
           <div className="bg-white lg:w-1/4 h-screen flex flex-col justify-between">
             <div className="flex flex-col pt-15 gap-10">
               {menuBarLink.map((data, i) => (
-                <div className="py-2 px-10 border-b border-gray-300 font-light text-2xl">
-                  <a href="#">{data.name}</a>
+                <div key={data.id} className="py-2 px-10 border-b border-gray-300 font-light text-2xl">
+                  <a href={data.link} onClick={()=>handleMenuBar()}>{data.name}</a>
                 </div>
               ))}
             </div>
@@ -489,7 +488,7 @@ const Hero = () => {
         </div>
       </section>
 
-      <section className="bg-white px-6 md:px-14 py-14 max-w-7xl mx-auto">
+      <section id="aboutUs" className="bg-white px-6 md:px-14 py-14 max-w-7xl mx-auto">
         {/* Top Label */}
         <p className="text-[#07446F] font-semibold text-sm tracking-wide mb-1">
           &#123; Who We Are &#125;

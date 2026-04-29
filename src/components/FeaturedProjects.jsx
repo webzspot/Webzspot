@@ -51,7 +51,7 @@ const cardVariants = {
 
 export default function FeaturedProjects() {
     return (
-        <section className="bg-white pt-24 pb-10 px-6">
+        <section id="services" className="bg-white pt-24 pb-10 px-6">
             <div className="max-w-7xl mx-auto">
 
                 {/* Heading */}

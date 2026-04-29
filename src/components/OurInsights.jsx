@@ -5,16 +5,19 @@ import { easeInOut, motion } from "framer-motion";
 const OurInsights = () => {
   const inSightsList = [
     {
+      id:1,
       image: "https://framerusercontent.com/images/iSOSdvRlqBEkFyQWxpbKwxe1Cw.jpg",
       date: "May 5, 2025",
       title: "The Future of AI in Digital Marketing",
     },
     {
+      id:2,
       image: "https://framerusercontent.com/images/XpegwdaUteVjDqo880uY6bzCONU.jpg",
       date: "May 5, 2025",
       title: "The Role of Artificial Intelligence in Modern Digital Marketing",
     },
     {
+      id:3,
       image: "https://framerusercontent.com/images/5yyiq2tkZSescxjDzYMQnk1n8E.jpg",
       date: "May 3, 2025",
       title: "Top Digital Marketing Trends for 2025",
@@ -32,7 +35,7 @@ const OurInsights = () => {
       {/* insight cards */}
       <div className="grid xl:grid-cols-3 gap-5 mt-5">
         {inSightsList.map((data,i)=>(
-            <div key={i}>
+            <div key={data.id}>
                 {/* image */}
                 <div className="overflow-hidden rounded-4xl">
                     <motion.div 

@@ -13,18 +13,22 @@ const Services = () => {
 
   const servicesList = [
     {
+      id:1,
       title: "Discovery and Planning",
       text: "We start with an in-depth consultation to understand your business goals and requirements. This helps us create a tailored strategy and detailed project plan, including wireframes and design prototypes. This helps us create a tailored strategy and detailed project plan, including wireframes and design prototypes.",
     },
     {
+      id:2,
       title: "Design and Development",
       text: "Our talented design team crafts visually appealing, intuitive, and user-friendly interfaces tailored to your brand's identity. Meanwhile, our skilled developers bring these designs to life, creating a fully functional, responsive website that performs seamlessly across all devices. We prioritize optimal performance, ensuring quick load times.",
     },
     {
+      id:3,
       title: "Review and Testing",
       text: "We present the initial design and development for your feedback, making any necessary revisions to meet your expectations. Our rigorous testing process ensures the website functions flawlessly across various devices and browsers. We thoroughly test for functionality, security, performance, identifying & fixing any issues to deliver a reliable website.",
     },
     {
+      id:4,
       title: "Project Handoff and Support",
       text: "Once the website is finalized, we conduct a thorough handoff, providing you with all necessary documentation and training to manage your new site effectively. Our commitment doesn't end there; we offer ongoing support to keep your website updated, secure, and running smoothly. we're here to ensure your continued success.",
     },
@@ -72,7 +76,6 @@ const Services = () => {
                 </svg>
                 <div className="bg-white h-28 w-40 rounded-tl-3xl"></div>
               </div>
-              
             </div>
           </div>
         </div>
@@ -88,7 +91,7 @@ const Services = () => {
         </div>
         <div className="flex flex-col gap-16">
           {servicesList.map((data, i) => (
-            <div key={i} className="relative">
+            <div key={data.id} className="relative">
               {/* Dot */}
               <div className="absolute top-2 left-0">
                 <div className="bg-white text-2xl text-gray-700">

@@ -51,6 +51,7 @@ const TechStack = () => {
           custom solutions. Our frontend,backend, and design expertise guarantee
           a strong and impactful digital presence.
         </p>
+        {/* tech stack list  */}
         <div className="mx-auto flex flex-wrap justify-center gap-10 max-w-xl">
           {techStackList.map((data, i) => (
             <img key={data.name}

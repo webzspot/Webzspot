@@ -5,11 +5,11 @@ import { FaXTwitter } from "react-icons/fa6";
 const Footer = () => {
   
   const navLink = [
-    {link:"#",name:"Home",},
-    {link:"#",name:"About Us",},
-    {link:"#",name:"Services",},
-    {link:"#",name:"Clients",},
-    {link:"#",name:"Contact Us",},
+    {id:1,link:"#",name:"Home",},
+    {id:2,link:"#aboutUs",name:"About Us",},
+    {id:3,link:"#services",name:"Services",},
+    {id:4,link:"#clients",name:"Clients",},
+    {id:5,link:"#contact",name:"Contact Us",},
   ];
 
   return (
@@ -33,7 +33,7 @@ const Footer = () => {
             {/* <h1 className="font-semibold text-gray-700 mb-2">Navigation</h1> */}
             <div className="flex flex-wrap gap-4 font-light text-base lg:text-lg justify-center items-center pr-2 mb-4">
               {navLink.map((data)=>(
-                <div key={data.name}>
+                <div key={data.id}>
                     <a href={data.link}>{data.name}</a>
                 </div>
               ))}
