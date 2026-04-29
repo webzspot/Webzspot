@@ -351,12 +351,17 @@ const Review = () => {
 
       {/* STYLES */}
       <style>{`
-        .section {
-          padding: 100px 20px;
-          background: radial-gradient(circle at top, #e1e7f7, #020617);
-          color: white;
-          overflow: hidden;
-        }
+       .section {
+  padding: 100px 20px;
+  background: linear-gradient(
+    180deg,
+    #eef7ff 0%,
+    #dbeafe 50%,
+    #c7e6ff 100%
+  );
+  color: #111827;
+  overflow: hidden;
+}
 
          .header {
          max-width: 700px;
@@ -373,16 +378,54 @@ const Review = () => {
           margin-bottom: 10px;
         }
 
-        .header h2 {
-          font-size: 32px;
-          margin: 0;
-          color: #333;
-        }
+       .header h2 {
+  font-size: 32px;
+  margin: 0;
+  color: #07446F;
+}
 
         .carousel {
-          overflow: hidden;
-          margin-bottom: 30px;
-        }
+  overflow: hidden;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+/* LEFT + RIGHT BLUR EFFECT */
+.carousel::before,
+.carousel::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 140px;
+  height: 100%;
+  z-index: 5;
+  pointer-events: none;
+  backdrop-filter: blur(10px);
+}
+
+/* LEFT SIDE */
+.carousel::before {
+  left: 0;
+  background: linear-gradient(
+    to right,
+    rgba(238, 247, 255, 1) 0%,
+    rgba(238, 247, 255, 0.95) 20%,
+    rgba(238, 247, 255, 0.6) 50%,
+    rgba(238, 247, 255, 0) 100%
+  );
+}
+
+/* RIGHT SIDE */
+.carousel::after {
+  right: 0;
+  background: linear-gradient(
+    to left,
+    rgba(238, 247, 255, 1) 0%,
+    rgba(238, 247, 255, 0.95) 20%,
+    rgba(238, 247, 255, 0.6) 50%,
+    rgba(238, 247, 255, 0) 100%
+  );
+}
 
         .track {
           display: flex;
@@ -413,30 +456,31 @@ const Review = () => {
         }
 
         /* CARD */
-        .card {
-          position: relative;
-          width: 300px;
-          flex: 0 0 300px;
-          padding: 20px;
-          border-radius: 20px;
-          background: rgba(255,255,255,0.05);
-          backdrop-filter: blur(14px);
-          border: 1px solid rgba(255,255,255,0.1);
-          transition: all 0.4s ease;
-          overflow: hidden;
-        }
+       .card {
+  position: relative;
+  width: 300px;
+  flex: 0 0 300px;
+  padding: 20px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(7,68,111,0.1);
+  transition: all 0.4s ease;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
 
         /* glow effect */
-        .glow {
-          position: absolute;
-          width: 200%;
-          height: 200%;
-          background: radial-gradient(circle, rgba(99,102,241,0.3), transparent);
-          top: -50%;
-          left: -50%;
-          opacity: 0;
-          transition: 0.5s;
-        }
+       .glow {
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(59,130,246,0.18), transparent);
+  top: -50%;
+  left: -50%;
+  opacity: 0;
+  transition: 0.5s;
+}
 
         .card:hover .glow {
           opacity: 1;
@@ -466,16 +510,16 @@ const Review = () => {
         }
 
         .top p {
-          margin: 0;
-          font-size: 13px;
-          color: #9ca3af;
-        }
+  margin: 0;
+  font-size: 13px;
+  color: #6b7280;
+}
 
-        .text {
-          font-size: 14px;
-          color: #d1d5db;
-          margin-bottom: 15px;
-        }
+.text {
+  font-size: 14px;
+  color: #374151;
+  margin-bottom: 15px;
+}
 
         .readMore {
           color: #818cf8;
