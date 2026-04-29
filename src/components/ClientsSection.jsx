@@ -7,14 +7,6 @@ export default function ClientsSection() {
         <div className="flex flex-col justify-center items-center p-5 text-center">
 
           <div className="text-[#07446f] text-lg lg:text-2xl font-semibold flex items-center gap-2 pb-5">
-            <svg
-              viewBox="0 0 256 256"
-              className="w-5 h-5 lg:w-6 lg:h-6"
-              fill="currentColor"
-            >
-              <path d="M122.34,109.66a8,8,0,0,0,11.32,0l40-40a8,8,0,0,0,0-11.32l-40-40a8,8,0,0,0-11.32,0l-40,40a8,8,0,0,0,0,11.32ZM128,35.31,156.69,64,128,92.69,99.31,64Z"></path>
-            </svg>
-
             <h1>Our Clients</h1>
           </div>
 
