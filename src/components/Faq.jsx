@@ -142,7 +142,7 @@ const styles = {
     },
 
     label: {
-        color: "#f55733",
+        color: "#07446F",
         fontWeight: 600,
         fontSize: "18px",
     },

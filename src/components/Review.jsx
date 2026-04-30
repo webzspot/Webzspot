@@ -372,7 +372,7 @@ const Review = () => {
         }
 
         .tag {
-          color: #f55733;
+          color: #07446F;
           font-weight: 600;
           font-size: 14px;
           margin-bottom: 10px;
