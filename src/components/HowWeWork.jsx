@@ -60,48 +60,25 @@ const Services = () => {
         </div>
         <div className=" mt-10 overflow-hidden">
           <div className="relative h-80 w-full overflow-hidden rounded-4xl rounded-br-3xl">
-  {servicesList.map((item, i) => (
-    <motion.img
-  key={i}
-  src={item.image}
-  animate={{
-    opacity: activeIndex === i ? 1 : 0,
-    scale: activeIndex === i ? 1 : 1.08,
-    filter: activeIndex === i ? "blur(0px)" : "blur(6px)",
-  }}
-  transition={{
-    opacity: { duration: 0.9, ease: "easeInOut" },
-    scale: { duration: 1.2, ease: "easeOut" },
-    filter: { duration: 0.9, ease: "easeOut" },
-  }}
-  className="absolute inset-0 w-full h-full object-cover"
-/>
+            {servicesList.map((item, i) => (
+              <motion.img
+                key={i}
+                src={item.image}
+                animate={{
+                  opacity: activeIndex === i ? 1 : 0,
+                  scale: activeIndex === i ? 1 : 1.08,
+                  filter: activeIndex === i ? "blur(0px)" : "blur(6px)",
+                }}
+                transition={{
+                  opacity: { duration: 0.9, ease: "easeInOut" },
+                  scale: { duration: 1.2, ease: "easeOut" },
+                  filter: { duration: 0.9, ease: "easeOut" },
+                }}
+                className="absolute inset-0 w-full h-full object-cover"
+              />
 
-  ))}
+            ))}
 
-            <div className="absolute bottom-0 right-0 flex items-end">
-              {/* curved corner bottom*/}
-              <div className="">
-                <svg
-                  className="w-10 h-10 scale-x-[-1] scale-y-[1] -mr-2 "
-                  viewBox="0 0 100 100"
-                  preserveAspectRatio="none"
-                >
-                  <path d="M0,0 C40,0 0,60 100,100 L0,100 Z" fill="white" />
-                </svg>
-              </div>
-              <div className="flex flex-col items-end">
-                {/* curved corner right  */}
-                <svg
-                  className="w-10 h-10 scale-x-[-1] scale-y-[1] -mr-2"
-                  viewBox="0 0 100 100"
-                  preserveAspectRatio="none"
-                >
-                  <path d="M0,0 C40,0 0,60 100,100 L0,100 Z" fill="white" />
-                </svg>
-                <div className="bg-white h-28 w-40 rounded-tl-3xl"></div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
