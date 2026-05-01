@@ -1,90 +1,6 @@
-// import React from "react";
-
-// const Contact = () => {
-//     return (
-//         <section className="contact-section">
-//             {/* Background */}
-//             <div className="contact-bg">
-//                 <img
-//                     src="https://framerusercontent.com/images/KQ1knR1dm5HBcHPKy9oO93moZI.jpg"
-//                     alt="background"
-//                 />
-//                 <div className="overlay"></div>
-//             </div>
-
-//             <div className="contact-container">
-//                 {/* Header */}
-//                 <div className="contact-header">
-//                     <p className="tag">{`{ Get in touch }`}</p>
-//                     <h2>Let’s Start Your Project Today</h2>
-//                 </div>
-
-//                 <div className="contact-content">
-//                     {/* Left Side */}
-//                     <div className="contact-info">
-//                         <img
-//                             src="https://framerusercontent.com/images/sO8Qc7EI5ijTzk0bY8jBsX1qYew.jpg"
-//                             alt="Michael"
-//                             className="profile-img"
-//                         />
-//                         <h3>Michael Bridges</h3>
-//                         <p className="role">CEO, BrightEdge</p>
-//                         <p className="desc">
-//                             At BrightEdge, we believe in building meaningful digital
-//                             experiences. If you ever have questions or need guidance, I’m
-//                             always here to support you. Your success is our mission — let’s
-//                             create something incredible together.
-//                         </p>
-//                     </div>
-
-//                     {/* Form */}
-//                     <form className="contact-form">
-//                         <div className="row">
-//                             <div className="input-group">
-//                                 <label>Name</label>
-//                                 <input type="text" placeholder="John Smith" required />
-//                             </div>
-
-//                             <div className="input-group">
-//                                 <label>Email</label>
-//                                 <input
-//                                     type="email"
-//                                     placeholder="johnsmith@gmail.com"
-//                                     required
-//                                 />
-//                             </div>
-//                         </div>
-
-//                         <div className="input-group">
-//                             <label>Service Needed?</label>
-//                             <select required>
-//                                 <option>Branding</option>
-//                                 <option>Web Design</option>
-//                                 <option>Marketing</option>
-//                                 <option>Development</option>
-//                             </select>
-//                         </div>
-
-//                         <div className="input-group">
-//                             <label>What can I help you with?</label>
-//                             <textarea
-//                                 placeholder="Hello, I'd like to enquire about..."
-//                                 required
-//                             ></textarea>
-//                         </div>
-
-//                         <button type="submit">Submit</button>
-//                     </form>
-//                 </div>
-//             </div>
-//         </section>
-//     );
-// };
-
-// export default Contact;
-
 import React from "react";
 import { motion } from "framer-motion";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 
 const Contact = () => {
 
@@ -92,174 +8,260 @@ const Contact = () => {
     const whatsappNumber = "919150182615";
     const email = "client@webzspot.com";
 
+    const services = [
+        "Web Design",
+        "Web Development",
+        "Website Maintenance",
+        "Search Engine Optimization",
+        "Digital Marketing",
+        "Logo Design",
+    ];
+
     return (
-        <section id="contact" className="relative w-full min-h-screen overflow-hidden text-slate-900">
+        <section
+            id="contact"
+            className="relative overflow-hidden bg-gradient-to-b from-[#f4fbff] via-[#edf7fd] to-white py-24"
+        >
 
-            {/* 🌈 Background Gradient */}
-            <div className="absolute inset-0 bg-gradient-to-br from-sky-100 via-blue-100 to-indigo-200" />
+            {/* BACKGROUND */}
+            <div className="absolute inset-0 pointer-events-none overflow-hidden">
 
-            {/* 🌊 Glow Effects */}
-            <div className="absolute inset-0 overflow-hidden">
-                <div className="absolute w-[600px] h-[600px] bg-sky-400/40 blur-[140px] rounded-full top-[-180px] left-[-150px]" />
-                <div className="absolute w-[500px] h-[500px] bg-blue-500/40 blur-[140px] rounded-full bottom-[-180px] right-[-150px]" />
-                <div className="absolute w-[400px] h-[400px] bg-indigo-400/30 blur-[120px] rounded-full top-[40%] left-[45%]" />
+                <div className="absolute top-[-150px] left-[-120px] w-[450px] h-[450px] bg-cyan-300/30 rounded-full blur-[120px]" />
+                <div className="absolute bottom-[-180px] right-[-120px] w-[500px] h-[500px] bg-blue-400/30 rounded-full blur-[140px]" />
+                <div className="absolute top-[40%] left-[45%] w-[300px] h-[300px] bg-sky-200/30 rounded-full blur-[100px]" />
+
             </div>
 
-            {/* Content */}
-            <div className="relative max-w-6xl mx-auto px-6 py-20">
+            <div className="relative z-10 container mx-auto px-6 lg:px-12 lg:pl-28">
 
                 {/* HEADER */}
                 <motion.div
-                    initial={{ opacity: 0, y: 25 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6 }}
-                    className="text-center mb-14"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    className="text-center max-w-4xl mx-auto"
                 >
-                    <div className="contact-header">
-                        <p className="tag">{`{ Get in touch }`}</p>
+
+                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-sky-100 border border-sky-200 text-sky-700 text-sm font-medium">
+                        <div className="w-2 h-2 rounded-full bg-sky-500 animate-pulse"></div>
+                        Empower Your Digital Journey
                     </div>
 
-                    <h1 className="mt-4 text-4xl md:text-5xl font-semibold tracking-tight text-slate-900">
-                        We’d love to hear from you ❤️
+                    <h1 className="mt-6 text-4xl lg:text-5xl font-bold text-[#07446f]">
+                        Transform Your Ideas
+                        <span className="block text-sky-500 mt-1">
+                            Into Digital Realities
+                        </span>
                     </h1>
 
-                    <p className="mt-5 text-slate-600 max-w-2xl mx-auto leading-relaxed">
-                        Reach out to us for personalized assistance, expert solutions, and discover how we can help elevate your business to the next level.
+                    <p className="mt-6 text-slate-600 text-lg max-w-3xl mx-auto">
+                        Reach out to us for personalized assistance, expert solutions,
+                        and discover how WebzSpot can elevate your business online.
                     </p>
 
                     {/* CTA */}
-                    <div className="flex flex-wrap justify-center gap-3 mt-8">
+                    <div className="flex flex-wrap justify-center gap-4 mt-10">
 
-                        <a href={`tel:${phoneNumber}`}
-                            className="px-5 py-2 rounded-full bg-white/70 backdrop-blur-xl border border-white/80 shadow-sm hover:scale-105 transition"
+                        <a
+                            href={`tel:${phoneNumber}`}
+                            className="flex items-center gap-3 px-6 py-3 rounded-xl bg-white border shadow-md hover:-translate-y-1 transition"
                         >
-                            📞 Call
+                            <img src="/phone.png" className="w-9 h-9" />
+                            Call Us
                         </a>
 
-                        <a href={`https://wa.me/${whatsappNumber}`}
+                        <a
+                            href={`https://wa.me/${whatsappNumber}`}
                             target="_blank"
                             rel="noreferrer"
-                            className="px-5 py-2 rounded-full bg-emerald-500 text-white shadow-md hover:scale-105 transition"
+                            className="flex items-center gap-3 px-6 py-3 rounded-xl bg-emerald-500 text-white shadow-lg hover:-translate-y-1 transition"
                         >
-                            💬 WhatsApp
+                            <img src="/social.png" className="w-9 h-9" />
+                            WhatsApp
                         </a>
 
-                        <a href={`mailto:${email}`}
-                            className="px-5 py-2 rounded-full bg-sky-500 text-white shadow-md hover:scale-105 transition"
+                        <a
+                            href={`mailto:${email}`}
+                            className="flex items-center gap-3 px-6 py-3 rounded-xl bg-sky-500 text-white shadow-lg hover:-translate-y-1 transition"
                         >
-                            ✉️ Email
+                            <img src="/google.png" className="w-9 h-9" />
+                            Email Us
                         </a>
 
                     </div>
+
                 </motion.div>
 
                 {/* GRID */}
-                <div className="grid md:grid-cols-2 gap-10">
+                <div className="grid lg:grid-cols-[1fr_1.2fr] gap-10 mt-20">
 
                     {/* LEFT */}
-                    <motion.div
-                        initial={{ opacity: 0, x: -25 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.6 }}
-                        className="space-y-6"
-                    >
+                    <div className="space-y-6">
 
-                        <div className="p-6 rounded-2xl bg-white/30 backdrop-blur-2xl border border-white/60 shadow-lg">
-                            <h2 className="text-xl font-semibold">
-                                Why choose us?
-                            </h2>
+                        {/* WHY BOX */}
+                        <div className="rounded-3xl bg-gradient-to-br from-[#0b5c8f] to-[#1282be] p-[1px] shadow-xl">
 
-                            <p className="mt-3 text-slate-600 leading-relaxed">
-                                We deliver high-performance digital solutions including Web Development,
-                                Digital Marketing, SEO, and UX Design tailored for scalable growth.
-                            </p>
+                            <div className="bg-white/10 backdrop-blur-2xl rounded-3xl p-8 text-white">
+
+                                <div className="flex items-center gap-4">
+                                    <img src="/google.png" className="w-21 h-21" />
+                                    <div>
+                                        <h2 className="text-2xl font-bold">
+                                            Why Choose WebzSpot?
+                                        </h2>
+                                        <p className="text-white/70">
+                                            Trusted Digital Partner
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                                <p className="mt-6 text-white/80">
+                                    WebzSpot delivers modern websites, branding, SEO, and digital
+                                    marketing solutions that help businesses grow online efficiently.
+                                </p>
+
+                                <div className="mt-8 space-y-4">
+
+                                    {[
+                                        "Custom Web Design & Development",
+                                        "SEO & Digital Marketing Solutions",
+                                        "Modern UI/UX Experiences",
+                                        "Dedicated Support & Maintenance",
+                                    ].map((item, i) => (
+                                        <div key={i} className="flex items-center gap-3">
+                                            <CheckCircle2 className="text-cyan-300" />
+                                            <span>{item}</span>
+                                        </div>
+                                    ))}
+
+                                </div>
+
+                            </div>
+
                         </div>
 
-                        <div className="p-6 rounded-2xl bg-gradient-to-br from-white/40 to-white/10 backdrop-blur-2xl border border-white/50 text-sm text-slate-700">
-                            ⚡ Fast delivery systems <br />
-                            🎯 Conversion-focused UI/UX <br />
-                            📈 SEO optimized architecture <br />
-                            🧠 Product strategy execution
+                        {/* CONTACT INFO */}
+                        <div className="grid sm:grid-cols-2 gap-5">
+
+                            <div className="bg-white/80 backdrop-blur-xl p-5 rounded-2xl shadow">
+
+                                <img src="/phone.png" className="w-11 h-11 mb-4" />
+                                <p className="text-sm text-slate-500">Phone</p>
+                                <h3 className="font-semibold">{phoneNumber}</h3>
+
+                            </div>
+
+                            <div className="bg-white/80 backdrop-blur-xl p-5 rounded-2xl shadow">
+
+                                <img src="/google.png" className="w-11 h-11 mb-4" />
+                                <p className="text-sm text-slate-500">Email</p>
+                                <h3 className="font-semibold">{email}</h3>
+
+                            </div>
+
                         </div>
 
-                    </motion.div>
+                    </div>
 
-                    {/* RIGHT FORM */}
-                    <motion.form
-                        initial={{ opacity: 0, x: 25 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.6 }}
-                        className={`
-                            space-y-5
-                            p-6
-                            rounded-2xl
-                            bg-white/40
-                            backdrop-blur-3xl
-                            border border-white/70
-                            shadow-[0_20px_50px_rgba(0,0,0,0.1)]
-                        `}
-                    >
+                    {/* FORM */}
+                    <motion.form className="bg-white/80 backdrop-blur-3xl p-10 rounded-3xl shadow-xl space-y-6">
 
-                        <div className="grid grid-cols-2 gap-4">
-                            <input className="input" placeholder="First Name" />
-                            <input className="input" placeholder="Last Name" />
+                        <h2 className="text-3xl font-bold text-[#07446f]">
+                            Request a Quote
+                        </h2>
+
+                        <p className="text-slate-500">
+                            Tell us your requirements and we’ll get back shortly.
+                        </p>
+
+                        {/* INPUTS */}
+                        <div className="grid md:grid-cols-2 gap-5">
+
+                            <div>
+                                <label className="label">First Name</label>
+                                <input className="input" placeholder="Enter first name" />
+                            </div>
+
+                            <div>
+                                <label className="label">Last Name</label>
+                                <input className="input" placeholder="Enter last name" />
+                            </div>
+
+                            <div>
+                                <label className="label">Phone Number</label>
+                                <input className="input" placeholder="+91 98765 43210" />
+                            </div>
+
+                            <div>
+                                <label className="label">Email Address</label>
+                                <input className="input" placeholder="example@gmail.com" />
+                            </div>
+
                         </div>
 
-                        <div className="grid grid-cols-2 gap-4">
-                            <input className="input" placeholder="Mobile Number" />
-                            <input className="input" placeholder="Email" />
-                        </div>
-
-                        <textarea rows="3" className="input" placeholder="Address" />
-
+                        {/* SERVICES */}
                         <div>
-                            <p className="text-sm text-slate-600 mb-2">
-                                Services
-                            </p>
+                            <label className="label">Services Interested In</label>
 
-                            <div className="grid grid-cols-2 gap-2 text-sm text-slate-700">
-                                <label><input type="checkbox" className="mr-2" />Web Development</label>
-                                <label><input type="checkbox" className="mr-2" />Digital Marketing</label>
-                                <label><input type="checkbox" className="mr-2" />SEO</label>
-                                <label><input type="checkbox" className="mr-2" />UX Design</label>
+                            <div className="grid sm:grid-cols-2 gap-3 mt-3">
+
+                                {services.map((s, i) => (
+                                    <label key={i} className="flex items-center gap-2 bg-slate-50 p-3 rounded-xl border">
+                                        <input type="checkbox" />
+                                        {s}
+                                    </label>
+                                ))}
+
                             </div>
                         </div>
 
-                        <textarea rows="5" className="input" placeholder="Describe your requirement..." />
+                        {/* MESSAGE */}
+                        <div>
+                            <label className="label">Project Details</label>
+                            <textarea className="input h-32" placeholder="Describe your project..." />
+                        </div>
 
-                        <button className="w-full py-3 rounded-xl bg-sky-500 text-white font-semibold hover:bg-sky-600 transition hover:scale-[1.02]">
-                            Submit Request →
+                        {/* BUTTON */}
+                        <button className="w-full bg-blue-600 text-white py-4 rounded-xl flex justify-center items-center gap-2 hover:-translate-y-1 transition">
+
+                            Submit Request
+                            <ArrowRight />
+
                         </button>
 
                     </motion.form>
 
                 </div>
+
             </div>
 
-            {/* INPUT STYLE */}
+            {/* STYLE */}
             <style>{`
-                .input {
-                    width: 100%;
-                    padding: 12px 14px;
-                    border-radius: 12px;
-                    background: rgba(255,255,255,0.6);
-                    backdrop-filter: blur(20px);
-                    border: 1px solid rgba(255,255,255,0.8);
-                    outline: none;
-                    color: #0f172a;
-                    font-size: 14px;
-                    transition: all 0.2s ease;
-                }
+        .input {
+          width: 100%;
+          padding: 14px 16px;
+          border-radius: 14px;
+          border: 1px solid #e2e8f0;
+          outline: none;
+          font-size: 14px;
+          background: rgba(255,255,255,0.95);
+          color: #0f172a; 
+          transition: 0.2s;
+        }
 
-                .input::placeholder {
-                    color: rgba(71,85,105,0.5);
-                }
+        .input:focus {
+          border-color: #38bdf8;
+          box-shadow: 0 0 0 4px rgba(56,189,248,0.15);
+        }
 
-                .input:focus {
-                    border-color: rgba(56,189,248,0.7);
-                    box-shadow: 0 0 0 3px rgba(56,189,248,0.2);
-                }
-            `}</style>
+        .label {
+          font-size: 13px;
+          font-weight: 600;
+          color: black;
+          margin-bottom: 6px;
+          display: block;
+        }
+      `}</style>
 
         </section>
     );
