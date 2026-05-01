@@ -289,7 +289,7 @@ const Hero = () => {
         <motion.div
           style={{
             opacity: heroOpacity,
-            filter: blurFilter
+            
           }}
           className="sticky top-14 lg:top-0 h-[calc(100vh-56px)] lg:h-screen overflow-hidden"
         >
@@ -311,7 +311,7 @@ const Hero = () => {
 
           {/* Left white panel */}
           <motion.div
-            style={{ x: leftX }}
+            style={{ x: leftX,filter: blurFilter }}
             className="absolute top-0 h-full bg-white z-20 flex items-center left-0 w-full px-6 md:left-[-72px] md:w-[calc(54%+72px)] md:pl-[calc(72px+4rem)] md:pr-16"
           >
             <motion.div style={{ opacity: textOpacity }} className="w-full">

@@ -64,14 +64,15 @@ export default function AboutSection() {
                 <div
                     className="relative flex-[1.8] overflow-hidden shadow-2xl"
                     style={{
-                        borderRadius: "28px",
-                        minHeight: "520px",
+                        borderRadius: "24px",
+                        maxHeight: "520px",
                     }}
                 >
                     <img
                         src="https://ik.imagekit.io/psltlu4ds/Webzspot/Webzspot/Image%20Assets/dartboard-with-arrow-increasing-bar-graph-enhance-setup-business-objective-target-goal-concept-by-3d-render.jpg"
                         alt="WebzSpot Vision"
                         className="w-full h-full object-cover scale-105 hover:scale-110 transition-transform duration-500"
+                        style={{ maxHeight: "520px" }}
                     />
 
                     {/* VISION OVERLAY */}
@@ -94,7 +95,7 @@ export default function AboutSection() {
                     <div className="absolute bottom-0 left-0">
                         <div>
                             <svg
-                                className="w-10 h-10 -mb-1"
+                                className="w-10 h-10 -ml-2"
                                 viewBox="0 0 100 100"
                                 preserveAspectRatio="none"
                             >
@@ -108,7 +109,7 @@ export default function AboutSection() {
                                 style={{
                                     width: "148px",
                                     height: "148px",
-                                    borderRadius: "0 28px 0 28px",
+                                    borderRadius: "0 16px 0 16px",
                                 }}
                             >
                                 <div className="w-24 h-24 relative flex items-center justify-center">
@@ -151,7 +152,7 @@ export default function AboutSection() {
 
                             <div>
                                 <svg
-                                    className="w-10 h-10 -ml-1"
+                                    className="w-10 h-10 -ml-2"
                                     viewBox="0 0 100 100"
                                     preserveAspectRatio="none"
                                 >
@@ -167,20 +168,20 @@ export default function AboutSection() {
 
                     {/* STORY CARD */}
                     <div className="relative">
-                        <div className="bg-gray-100 relative p-7 rounded-[32px] shadow-md text-gray-700 text-[15px] leading-relaxed">
+                        <div className="bg-gray-100 relative p-4 rounded-2xl shadow-md text-gray-700 text-[15px] leading-relaxed">
 
                             <div
-                                className="relative -left-6 -top-6 z-10 bg-white inline-block px-6 py-3 shadow-sm"
+                                className="relative z-10 bg-white inline-block px-4 py-2 shadow-sm"
                                 style={{
-                                    borderRadius: "0 0 18px 0",
+                                    borderRadius: "18px",
                                 }}
                             >
-                                <h3 className="text-4xl font-bold text-gray-900">
+                                <h3 className="text-2xl font-bold text-gray-900">
                                     Our Story
                                 </h3>
                             </div>
 
-                            <div className="text-lg space-y-4 mt-2">
+                            <div className=" mt-2">
                                 <p>
                                     We are a dynamic team of technology enthusiasts,
                                     creative problem solvers, and dedicated professionals who are driven by a shared goal to help our clients succeed.
@@ -192,8 +193,8 @@ export default function AboutSection() {
 
                     {/* SECOND IMAGE */}
                     <div
-                        className="overflow-hidden rounded-[32px] flex-1 relative shadow-2xl"
-                        style={{ minHeight: "220px" }}
+                        className="overflow-hidden rounded-2xl flex-1 relative shadow-2xl"
+                        style={{ maxHeight: "320px" }}
                     >
                         <img
                             src="https://ik.imagekit.io/psltlu4ds/Webzspot/Webzspot/Image%20Assets/Image%20(2).png"
