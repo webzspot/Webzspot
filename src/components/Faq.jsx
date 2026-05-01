@@ -24,6 +24,14 @@ export default function FAQ() {
 
     return (
         <section style={styles.section}>
+
+            {/* BACKGROUND BLOBS */}
+            <div style={styles.bgBlobs}>
+                <div style={styles.blob1}></div>
+                <div style={styles.blob2}></div>
+                <div style={styles.blob3}></div>
+            </div>
+
             <div style={styles.container}>
 
                 {/* LEFT SIDE */}
@@ -36,32 +44,12 @@ export default function FAQ() {
                         Clear Solutions to Your Concerns
                     </h2>
 
-                    {/* IMAGE WITH CURVED CORNER */}
                     <div style={styles.imageWrapper}>
-                        <div style={styles.bgWrapper}>
-                            <img
-                                src="https://framerusercontent.com/images/QY6drXCswOtdH5g7g8gHn9nbx8.jpeg?width=960&height=1200"
-                                alt="faq"
-                                style={styles.image}
-                            />
-                        </div>
-
-                        {/* CURVED CORNER */}
-                        <div style={styles.cornerWrap}>
-
-                            <svg viewBox="0 0 100 100" style={styles.curve1}>
-                                <path d="M0,0 C40,0 0,60 100,100 L0,100 Z" fill="#fff" />
-                            </svg>
-
-                            <div style={styles.cornerBoxWrap}>
-                                <svg viewBox="0 0 100 100" style={styles.curve2}>
-                                    <path d="M0,0 C40,0 0,60 100,100 L0,100 Z" fill="#fff" />
-                                </svg>
-
-                                <div style={styles.cornerBox}></div>
-                            </div>
-
-                        </div>
+                        <img
+                            src="https://framerusercontent.com/images/QY6drXCswOtdH5g7g8gHn9nbx8.jpeg?width=960&height=1200"
+                            alt="faq"
+                            style={styles.image}
+                        />
                     </div>
                 </div>
 
@@ -75,7 +63,7 @@ export default function FAQ() {
                                 <div
                                     style={{
                                         ...styles.question,
-                                        color: isOpen ? "#f55733" : "#1a1a1a",
+                                        color: isOpen ? "#0ea5e9" : "#1a1a1a",
                                     }}
                                     onClick={() => toggle(i)}
                                 >
@@ -117,9 +105,54 @@ export default function FAQ() {
 }
 
 const styles = {
+
+    /* MAIN BACKGROUND */
     section: {
         padding: "100px 20px",
-        background: "#fff",
+        background: "linear-gradient(to bottom, #f4fbff, #edf7fd, #ffffff)",
+        position: "relative",
+        overflow: "hidden",
+    },
+
+    /* BLUR BACKGROUND GLOWS */
+    bgBlobs: {
+        position: "absolute",
+        inset: 0,
+        pointerEvents: "none",
+        zIndex: 0,
+    },
+
+    blob1: {
+        position: "absolute",
+        top: "-120px",
+        left: "-100px",
+        width: "420px",
+        height: "420px",
+        background: "rgba(56, 189, 248, 0.25)",
+        filter: "blur(120px)",
+        borderRadius: "50%",
+    },
+
+    blob2: {
+        position: "absolute",
+        bottom: "-140px",
+        right: "-120px",
+        width: "500px",
+        height: "500px",
+        background: "rgba(59, 130, 246, 0.25)",
+        filter: "blur(140px)",
+        borderRadius: "50%",
+    },
+
+    blob3: {
+        position: "absolute",
+        top: "40%",
+        left: "45%",
+        width: "300px",
+        height: "300px",
+        background: "rgba(186, 230, 253, 0.25)",
+        filter: "blur(100px)",
+        borderRadius: "50%",
     },
 
     container: {
@@ -129,6 +162,8 @@ const styles = {
         gridTemplateColumns: "1fr 1fr",
         gap: "60px",
         alignItems: "start",
+        position: "relative",
+        zIndex: 1,
     },
 
     /* LEFT */
@@ -138,7 +173,6 @@ const styles = {
         gap: "20px",
         position: "sticky",
         top: "100px",
-        alignSelf: "start",
     },
 
     label: {
@@ -155,64 +189,17 @@ const styles = {
     },
 
     imageWrapper: {
-        position: "relative",
         width: "100%",
         height: "520px",
         borderRadius: "40px",
         overflow: "hidden",
-    },
-
-    bgWrapper: {
-        position: "absolute",
-        inset: 0,
-        borderRadius: "inherit",
-        zIndex: 1,
+        marginTop: "10px",
     },
 
     image: {
         width: "100%",
         height: "100%",
         objectFit: "cover",
-        display: "block",
-        borderRadius: "inherit",
-    },
-
-    /* CURVED CORNER */
-    cornerWrap: {
-        position: "absolute",
-        bottom: 0,
-        right: 0,
-        display: "flex",
-        alignItems: "flex-end",
-        zIndex: 2,
-    },
-
-    curve1: {
-        width: "40px",
-        height: "40px",
-        transform: "scaleX(-1)",
-        marginRight: "-6px",
-    },
-
-    cornerBoxWrap: {
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "flex-end",
-    },
-
-    curve2: {
-        width: "40px",
-        height: "40px",
-        transform: "scaleX(-1)",
-        marginRight: "-6px",
-        marginBottom: "-4px",
-    },
-
-    cornerBox: {
-        width: "160px",
-        height: "110px",
-        background: "#fff",
-        borderTopLeftRadius: "30px",
     },
 
     /* RIGHT */
@@ -233,7 +220,6 @@ const styles = {
         cursor: "pointer",
         fontSize: "18px",
         fontWeight: 600,
-        color: "#1a1a1a",
     },
 
     toggle: {
