@@ -42,7 +42,7 @@ const services = [
 
 /* ── Cursor-following image ── */
 const FloatingImage = ({ src, x, y, visible, rotation }) => (
-  <motion.div 
+  <motion.div
     className="pointer-events-none fixed z-[999] w-52 h-36 md:w-64 md:h-44 rounded-2xl overflow-hidden shadow-2xl"
     style={{ top: 0, left: 0, translateX: "-50%", translateY: "-50%" }}
     animate={{
@@ -74,7 +74,7 @@ const ServiceRow = ({ service, isHovered, onEnter, onLeave, onMove }) => (
         </span>
         <div className="flex items-end gap-2 lg:gap-4 flex-wrap">
           <motion.h3
-            animate={{ color: isHovered ? "#155dfc" : "#1f2937" }}
+            animate={{ color: isHovered ? "#07446F" : "#1f2937" }}
             transition={{ duration: 0.2 }}
             className="font-bold tracking-tight leading-none"
             style={{ fontSize: "clamp(1.8rem, 7vw, 5rem)" }}
@@ -120,9 +120,10 @@ const Hero = () => {
 
   const leftX = useTransform(scrollYProgress, [0, 0.6], ["0%", "-130%"]);
   const rightX = useTransform(scrollYProgress, [0, 0.6], ["0%", "100vw"]);
-  const textOpacity = useTransform(scrollYProgress, [0, 0.3], [1, 0]);
+  const textOpacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
   const heroOpacity = useTransform(scrollYProgress, [0.7, 1], [1, 0]);
   const bgScale = useTransform(scrollYProgress, [0, 1], [1, 1.1]);
+
 
   const videoUrl =
     "https://framerusercontent.com/assets/7YBK8amA6z135CX8nogC5hVIKA.mp4";
@@ -148,11 +149,11 @@ const Hero = () => {
   // Menu Bar links
 
   const menuBarLink = [
-    {id:1,link:"#",name:"Home",},
-    {id:2,link:"#aboutUs",name:"About Us",},
-    {id:3,link:"#services",name:"Services",},
-    {id:4,link:"#clients",name:"Clients",},
-    {id:5,link:"#contact",name:"Contact Us",},
+    { id: 1, link: "#", name: "Home" },
+    { id: 2, link: "#aboutUs", name: "About Us" },
+    { id: 3, link: "#services", name: "Services" },
+    { id: 4, link: "#clients", name: "Clients" },
+    { id: 5, link: "#contact", name: "Contact Us" },
   ];
 
   // MenuBar state
@@ -194,14 +195,16 @@ const Hero = () => {
           )}
           {/* {!isVisible && <span className="w-5 h-[1.5px] bg-white" />} */}
         </button>
-        <div
-          className="text-white text-[15px] tracking-[0.3em] font-semibold"
-          style={{ writingMode: "vertical-rl", transform: "rotate(180deg)" }}
-        >
-          WEBZSPOT
-        </div>
-        <div className="-rotate-z-90">
-          <img src={logo} alt="webzspot logo" />
+        <div className="flex flex-col items-center gap-10">
+          <div
+            className="text-white text-[15px] tracking-[0.3em] font-semibold"
+            style={{ writingMode: "vertical-rl", transform: "rotate(180deg)" }}
+          >
+            WEBZSPOT
+          </div>
+          <div className="-rotate-z-90">
+            <img src={logo} alt="webzspot logo" />
+          </div>
         </div>
         {/* <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
           <line x1="14" y1="2"  x2="14" y2="26" stroke="white" strokeWidth="2" strokeLinecap="round"/>
@@ -234,8 +237,13 @@ const Hero = () => {
           <div className="bg-white lg:w-1/4 h-screen flex flex-col justify-between">
             <div className="flex flex-col pt-15 gap-10">
               {menuBarLink.map((data, i) => (
-                <div key={data.id} className="py-2 px-10 border-b border-gray-300 font-light text-2xl">
-                  <a href={data.link} onClick={()=>handleMenuBar()}>{data.name}</a>
+                <div
+                  key={data.id}
+                  className="py-2 px-10 border-b border-gray-300 font-light text-2xl"
+                >
+                  <a href={data.link} onClick={() => handleMenuBar()}>
+                    {data.name}
+                  </a>
                 </div>
               ))}
             </div>
@@ -244,7 +252,7 @@ const Hero = () => {
       )}
 
       {/* ── MOBILE TOP-BAR ── */}
-      <div className=" fixed top-0 left-0 right-0 lg:hidden h-14 bg-[#07446F] z-[999] flex items-center justify-between px-5">  
+      <div className=" fixed top-0 left-0 right-0 lg:hidden h-14 bg-[#07446F] z-[999] flex items-center justify-between px-5">
         <div className="flex gap-2">
           <img src={logo} alt="webzspot logo" className="w-10 h-5" />
           <span className="text-white text-xs tracking-[0.3em] font-semibold">
@@ -261,7 +269,7 @@ const Hero = () => {
               <FaBars />
             </span>
           ) : (
-            <span className="text-red">
+            <span className="text-black">
               <FaX />
             </span>
           )}

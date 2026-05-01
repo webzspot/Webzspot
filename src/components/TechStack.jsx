@@ -1,3 +1,4 @@
+import { easeInOut, motion } from "framer-motion";
 import React from "react";
 
 const TechStack = () => {
@@ -52,14 +53,23 @@ const TechStack = () => {
           a strong and impactful digital presence.
         </p>
         {/* tech stack list  */}
-        <div className="mx-auto flex flex-wrap justify-center gap-10 max-w-xl">
-          {techStackList.map((data, i) => (
-            <img key={data.name}
+<div className="relative overflow-hidden">
+        <motion.div
+        animate={{x:["0%","-50%"]}}
+        transition={{ease:"linear" ,duration:20 ,repeat:Infinity}}
+        className="flex justify-between gap-15"
+        >
+            {[...techStackList,...techStackList].map((data, i) => (
+            <img key={i}
               src={data.link}
               alt={data.name}
               className="w-8 md:w-12 lg:w-14"
             />
           ))}
+            
+        </motion.div>
+        <div className="h-full w-32 bg-linear-to-r from-white via-white/50 to-white/10 overflow-hidden absolute top-0 left-0"></div>
+        <div className="h-full w-32 bg-linear-to-l from-white via-white/50 to-white/10 overflow-hidden absolute top-0 right-0"></div>
         </div>
     </div>
   );
