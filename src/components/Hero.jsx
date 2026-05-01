@@ -1,5 +1,5 @@
 import React, { useRef, useState, useCallback } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, useMotionTemplate } from "framer-motion";
 import { FiPlus, FiArrowRight } from "react-icons/fi";
 import { FaFacebook, FaInstagram, FaBehance } from "react-icons/fa";
 import { FaBars, FaX, FaXTwitter } from "react-icons/fa6";
@@ -90,15 +90,15 @@ const ServiceRow = ({ service, isHovered, onEnter, onLeave, onMove }) => (
         animate={
           isHovered
             ? {
-                backgroundColor: "#000000",
-                borderColor: "#000000",
-                color: "#ffffff",
-              }
+              backgroundColor: "#000000",
+              borderColor: "#000000",
+              color: "#ffffff",
+            }
             : {
-                backgroundColor: "rgba(0,0,0,0)",
-                borderColor: "#9ca3af",
-                color: "#374151",
-              }
+              backgroundColor: "rgba(0,0,0,0)",
+              borderColor: "#9ca3af",
+              color: "#374151",
+            }
         }
         transition={{ duration: 0.22 }}
         className="w-10 h-10 md:w-12 md:h-12 rounded-full border flex items-center justify-center shrink-0 ml-2"
@@ -123,6 +123,8 @@ const Hero = () => {
   const textOpacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
   const heroOpacity = useTransform(scrollYProgress, [0.7, 1], [1, 0]);
   const bgScale = useTransform(scrollYProgress, [0, 1], [1, 1.1]);
+  const blurValue = useTransform(scrollYProgress, [0, 0.6], [0, 6]);
+  const blurFilter = useMotionTemplate`blur(${blurValue}px)`;
 
 
   const videoUrl =
@@ -285,7 +287,10 @@ const Hero = () => {
         style={{ zIndex: 10 }}
       >
         <motion.div
-          style={{ opacity: heroOpacity }}
+          style={{
+            opacity: heroOpacity,
+            filter: blurFilter
+          }}
           className="sticky top-14 lg:top-0 h-[calc(100vh-56px)] lg:h-screen overflow-hidden"
         >
           {/* BG video */}
