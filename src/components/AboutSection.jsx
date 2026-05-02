@@ -65,14 +65,14 @@ export default function AboutSection() {
                     className="relative flex-[1.8] overflow-hidden shadow-2xl"
                     style={{
                         borderRadius: "24px",
-                        maxHeight: "520px",
+                        maxHeight: "620px",
                     }}
                 >
                     <img
                         src="https://ik.imagekit.io/psltlu4ds/Webzspot/Webzspot/Image%20Assets/dartboard-with-arrow-increasing-bar-graph-enhance-setup-business-objective-target-goal-concept-by-3d-render.jpg"
                         alt="WebzSpot Vision"
                         className="w-full h-full object-cover scale-105 hover:scale-110 transition-transform duration-500"
-                        style={{ maxHeight: "520px" }}
+                        style={{ maxHeight: "620px" }}
                     />
 
                     {/* VISION OVERLAY */}
@@ -177,14 +177,19 @@ export default function AboutSection() {
                                 }}
                             >
                                 <h3 className="text-2xl font-bold text-gray-900">
-                                    Our Story
+                                    moto
                                 </h3>
                             </div>
 
                             <div className=" mt-2">
                                 <p>
-                                    We are a dynamic team of technology enthusiasts,
+                                    {/* We are a dynamic team of technology enthusiasts,
                                     creative problem solvers, and dedicated professionals who are driven by a shared goal to help our clients succeed.
+                               */}
+                                    We believe in transforming technology into a powerful asset that drives your success in the digital landscape.
+                                    With personalized strategies and innovative approaches, we ensure that every step of your digital journey leads to enhanced efficiency, competitiveness, and long-term value.
+                                    Partner with WebzSpot and elevate your business to new heights of digital excellence.
+
                                 </p>
                             </div>
 
@@ -194,7 +199,7 @@ export default function AboutSection() {
                     {/* SECOND IMAGE */}
                     <div
                         className="overflow-hidden rounded-2xl flex-1 relative shadow-2xl"
-                        style={{ maxHeight: "320px" }}
+                        style={{ maxHeight: "380px" }}
                     >
                         <img
                             src="https://ik.imagekit.io/psltlu4ds/Webzspot/Webzspot/Image%20Assets/Image%20(2).png"
@@ -203,7 +208,7 @@ export default function AboutSection() {
                         />
 
                         {/* MOTO OVERLAY */}
-                        <div className="absolute bottom-4 left-4 right-4">
+                        {/* <div className="absolute bottom-4 left-4 right-4">
                             <div className="bg-black/50 backdrop-blur-xl text-white p-4 rounded-2xl border border-white/20">
                                 <h2 className="text-lg text-blue-200 border-b border-blue-300 font-semibold mb-2 pb-1">
                                     Moto
@@ -214,7 +219,7 @@ export default function AboutSection() {
                                     Partner with WebzSpot and elevate your business to new heights of digital excellence.
                                 </p>
                             </div>
-                        </div>
+                        </div> */}
 
                     </div>
 
