@@ -44,7 +44,7 @@ function Counter({ value, suffix }) {
 export default function AboutSection() {
     return (
         <section
-            id="about"
+            id="aboutUs"
             className="bg-white px-6 md:px-14 py-14 max-w-7xl mx-auto"
         >
             {/* Top Label */}

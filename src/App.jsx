@@ -12,6 +12,7 @@ import Review from "./components/Review";
 import Contact from "./components/Contact";
 import ClientsSection from "./components/ClientsSection";
 import TechStack from "./components/TechStack";
+import ProjectPortfolio from "./components/ProjectPortfolio";
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
       <Hero />
       <AboutSection />
       <FeaturedProjects />
+      <ProjectPortfolio />
       <TechStack/>
       <HowWeWork />
       {/* <OurTeam /> */}
