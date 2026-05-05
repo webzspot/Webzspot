@@ -85,11 +85,12 @@ const Contact = () => {
                         <div className="relative z-10 grid grid-cols-1 lg:grid-cols-[0.95fr_1.05fr]">
 
                             {/* LEFT SIDE */}
-                            <div className="bg-gradient-to-br from-[#084b73] via-[#0b6698] to-[#1496d1] p-6 sm:p-8 lg:p-14 text-white flex flex-col justify-between">
+                            <div className="bg-gradient-to-br from-[#084b73] via-[#0b6698] to-[#1496d1] p-5 sm:p-8 lg:p-14 text-white flex flex-col justify-between">
 
                                 <div>
 
-                                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-sm backdrop-blur-xl">
+                                    {/* TOP BADGE */}
+                                    <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full bg-white/10 border border-white/20 text-xs sm:text-sm backdrop-blur-xl">
 
                                         <div className="w-2 h-2 rounded-full bg-cyan-300 animate-pulse"></div>
 
@@ -97,17 +98,19 @@ const Contact = () => {
 
                                     </div>
 
-                                    <h2 className="mt-8 text-4xl lg:text-5xl font-bold leading-tight">
+                                    {/* HEADING */}
+                                    <h2 className="mt-6 sm:mt-8 text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
 
                                         Let’s Build
 
-                                        <span className="block text-cyan-300">
+                                        <span className="block text-cyan-300 mt-1">
                                             Something Amazing
                                         </span>
 
                                     </h2>
 
-                                    <p className="mt-6 text-white/75 leading-relaxed">
+                                    {/* DESCRIPTION */}
+                                    <p className="mt-5 sm:mt-6 text-sm sm:text-base text-white/75 leading-relaxed">
 
                                         WebzSpot delivers premium websites, SEO,
                                         branding, and digital marketing solutions
@@ -116,7 +119,7 @@ const Contact = () => {
                                     </p>
 
                                     {/* FEATURES */}
-                                    <div className="mt-10 space-y-4">
+                                    <div className="mt-8 sm:mt-10 space-y-4">
 
                                         {[
                                             "Custom Web Design & Development",
@@ -127,12 +130,12 @@ const Contact = () => {
 
                                             <div
                                                 key={i}
-                                                className="flex items-center gap-3"
+                                                className="flex items-start gap-3"
                                             >
 
-                                                <CheckCircle2 className="text-cyan-300" />
+                                                <CheckCircle2 className="text-cyan-300 w-5 h-5 shrink-0 mt-0.5" />
 
-                                                <span className="text-white/90">
+                                                <span className="text-sm sm:text-base text-white/90 leading-relaxed">
                                                     {item}
                                                 </span>
 
@@ -145,30 +148,31 @@ const Contact = () => {
                                 </div>
 
                                 {/* CONTACT CARDS */}
-                                <div className="mt-14 space-y-4">
+                                <div className="mt-10 sm:mt-14 space-y-4">
 
                                     {/* PHONE */}
                                     <a
                                         href={`tel:${phoneNumber}`}
-                                        className="flex items-center gap-4 bg-white/10 border border-white/10 rounded-2xl p-4 backdrop-blur-xl hover:bg-white/15 transition"
+                                        className="flex items-center gap-3 sm:gap-4 bg-white/10 border border-white/10 rounded-2xl p-3 sm:p-4 backdrop-blur-xl hover:bg-white/15 transition overflow-hidden"
                                     >
 
-                                        <div className="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center">
+                                        <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white/10 flex items-center justify-center shrink-0">
 
                                             <img
                                                 src="/phone.png"
-                                                className="w-7 h-7"
+                                                className="w-6 h-6 sm:w-7 sm:h-7"
+                                                alt="phone"
                                             />
 
                                         </div>
 
-                                        <div>
+                                        <div className="min-w-0 flex-1">
 
-                                            <p className="text-sm text-white/60">
+                                            <p className="text-xs sm:text-sm text-white/60">
                                                 Phone Number
                                             </p>
 
-                                            <h3 className="font-semibold text-lg">
+                                            <h3 className="font-semibold text-sm sm:text-lg break-all">
                                                 {phoneNumber}
                                             </h3>
 
@@ -179,25 +183,26 @@ const Contact = () => {
                                     {/* EMAIL */}
                                     <a
                                         href={`mailto:${email}`}
-                                        className="flex items-center gap-4 bg-white/10 border border-white/10 rounded-2xl p-4 backdrop-blur-xl hover:bg-white/15 transition"
+                                        className="flex items-center gap-3 sm:gap-4 bg-white/10 border border-white/10 rounded-2xl p-3 sm:p-4 backdrop-blur-xl hover:bg-white/15 transition overflow-hidden"
                                     >
 
-                                        <div className="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center">
+                                        <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white/10 flex items-center justify-center shrink-0">
 
                                             <img
                                                 src="/google.png"
-                                                className="w-7 h-7"
+                                                className="w-6 h-6 sm:w-7 sm:h-7"
+                                                alt="email"
                                             />
 
                                         </div>
 
-                                        <div>
+                                        <div className="min-w-0 flex-1">
 
-                                            <p className="text-sm text-white/60">
+                                            <p className="text-xs sm:text-sm text-white/60">
                                                 Email Address
                                             </p>
 
-                                            <h3 className="font-semibold text-lg">
+                                            <h3 className="font-semibold text-sm sm:text-lg break-all">
                                                 {email}
                                             </h3>
 
@@ -210,25 +215,26 @@ const Contact = () => {
                                         href={`https://wa.me/${whatsappNumber}`}
                                         target="_blank"
                                         rel="noreferrer"
-                                        className="flex items-center gap-4 bg-white/10 border border-white/10 rounded-2xl p-4 backdrop-blur-xl hover:bg-white/15 transition"
+                                        className="flex items-center gap-3 sm:gap-4 bg-white/10 border border-white/10 rounded-2xl p-3 sm:p-4 backdrop-blur-xl hover:bg-white/15 transition overflow-hidden"
                                     >
 
-                                        <div className="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center">
+                                        <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white/10 flex items-center justify-center shrink-0">
 
                                             <img
                                                 src="/social.png"
-                                                className="w-7 h-7"
+                                                className="w-6 h-6 sm:w-7 sm:h-7"
+                                                alt="whatsapp"
                                             />
 
                                         </div>
 
-                                        <div>
+                                        <div className="min-w-0 flex-1">
 
-                                            <p className="text-sm text-white/60">
+                                            <p className="text-xs sm:text-sm text-white/60">
                                                 WhatsApp
                                             </p>
 
-                                            <h3 className="font-semibold text-lg">
+                                            <h3 className="font-semibold text-sm sm:text-lg break-words">
                                                 Quick Support Available
                                             </h3>
 
@@ -245,28 +251,24 @@ const Contact = () => {
                                 initial={{ opacity: 0, y: 40 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.7 }}
-                                className="p-6 sm:p-8 lg:p-14"                            >
+                                className="p-5 sm:p-8 lg:p-14"
+                            >
+                                <div className="w-full max-w-2xl mx-auto">
 
-                                <div className="max-w-2xl">
-
-                                    <h2 className="text-4xl font-bold text-[#063b60]">
-
+                                    {/* HEADING */}
+                                    <h2 className="text-3xl sm:text-4xl font-bold text-[#063b60] leading-tight">
                                         Request a Quote
-
                                     </h2>
 
-                                    <p className="mt-4 text-slate-500 leading-relaxed">
-
+                                    <p className="mt-4 text-sm sm:text-base text-slate-500 leading-relaxed">
                                         Tell us your requirements and we’ll
                                         get back to you shortly.
-
                                     </p>
 
                                     {/* INPUTS */}
-                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-10">
+                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 mt-8 sm:mt-10">
 
                                         <div>
-
                                             <label className="label">
                                                 First Name
                                             </label>
@@ -275,11 +277,9 @@ const Contact = () => {
                                                 className="premium-input"
                                                 placeholder="John"
                                             />
-
                                         </div>
 
                                         <div>
-
                                             <label className="label">
                                                 Last Name
                                             </label>
@@ -288,11 +288,9 @@ const Contact = () => {
                                                 className="premium-input"
                                                 placeholder="Doe"
                                             />
-
                                         </div>
 
                                         <div>
-
                                             <label className="label">
                                                 Phone Number
                                             </label>
@@ -301,11 +299,9 @@ const Contact = () => {
                                                 className="premium-input"
                                                 placeholder="+91 98765 43210"
                                             />
-
                                         </div>
 
                                         <div>
-
                                             <label className="label">
                                                 Email Address
                                             </label>
@@ -314,7 +310,6 @@ const Contact = () => {
                                                 className="premium-input"
                                                 placeholder="example@gmail.com"
                                             />
-
                                         </div>
 
                                     </div>
@@ -326,21 +321,22 @@ const Contact = () => {
                                             Services Interested In
                                         </label>
 
-                                        <div className="grid sm:grid-cols-2 gap-3 mt-4">
+                                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
 
                                             {services.map((service, i) => (
 
                                                 <label
                                                     key={i}
-                                                    className="group flex items-center gap-3 rounded-2xl border border-slate-200 bg-slate-50 hover:bg-sky-50 hover:border-sky-200 p-4 transition cursor-pointer"
+                                                    className="group flex items-start gap-3 rounded-2xl border border-slate-200 bg-slate-50 hover:bg-sky-50 hover:border-sky-200 p-4 transition cursor-pointer"
                                                 >
 
-                                                    <input type="checkbox" />
+                                                    <input
+                                                        type="checkbox"
+                                                        className="mt-1 shrink-0"
+                                                    />
 
-                                                    <span className="text-slate-700 group-hover:text-sky-700">
-
+                                                    <span className="text-sm sm:text-base text-slate-700 group-hover:text-sky-700 break-words">
                                                         {service}
-
                                                     </span>
 
                                                 </label>
@@ -359,23 +355,22 @@ const Contact = () => {
                                         </label>
 
                                         <textarea
-                                            className="premium-input h-36 resize-none"
+                                            className="premium-input h-32 sm:h-36 resize-none"
                                             placeholder="Tell us about your project..."
                                         />
 
                                     </div>
 
                                     {/* BUTTON */}
-                                    <button className="group mt-10 w-full rounded-2xl bg-gradient-to-r from-sky-500 to-blue-600 py-4 md:py-5 text-white font-semibold shadow-xl hover:scale-[1.01] transition-all duration-300 flex items-center justify-center gap-3">
+                                    <button className="group mt-8 sm:mt-10 w-full rounded-2xl bg-gradient-to-r from-sky-500 to-blue-600 py-4 sm:py-5 text-sm sm:text-base text-white font-semibold shadow-xl hover:scale-[1.01] transition-all duration-300 flex items-center justify-center gap-3">
 
                                         Submit Request
 
-                                        <ArrowRight className="group-hover:translate-x-1 transition" />
+                                        <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition" />
 
                                     </button>
 
                                 </div>
-
                             </motion.form>
 
                         </div>
