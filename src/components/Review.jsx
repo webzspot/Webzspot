@@ -90,7 +90,9 @@ const Review = () => {
       {/* HEADER */}
       <div className="header">
         <p className="tag">{`{ What Our Clients Are Saying }`}</p>
-        <h2>Testimonials That Inspire Confidence</h2>
+        <h2 className="text-3xl sm:text-4xl md:text-6xl font-black text-gray-950 uppercase leading-tight mb-8 md:mb-12">
+          Testimonials That Inspire Confidence
+        </h2>
       </div>
 
       {/* ROW 1 */}

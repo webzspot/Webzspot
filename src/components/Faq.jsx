@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const faqData = [
@@ -12,11 +12,26 @@ const faqData = [
     "Can you track the performance of marketing campaigns?",
     "Do you offer packages or customized services?",
     "What are the payment methods and plans for projects?",
-    "Do you offer discounts for long-term collaborations?",
 ];
 
 export default function FAQ() {
+
     const [active, setActive] = useState(null);
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 768);
+        };
+
+        handleResize();
+
+        window.addEventListener("resize", handleResize);
+
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
 
     const toggle = (i) => {
         setActive(active === i ? null : i);
@@ -32,30 +47,70 @@ export default function FAQ() {
                 <div style={styles.blob3}></div>
             </div>
 
-            <div style={styles.container}>
+            <div
+                style={{
+                    ...styles.container,
+                    gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr",
+                    gap: isMobile ? "40px" : "60px",
+                }}
+            >
 
                 {/* LEFT SIDE */}
-                <div style={styles.left}>
+                <div
+                    style={{
+                        ...styles.left,
+                        position: isMobile ? "relative" : "sticky",
+                        top: isMobile ? "0px" : "100px",
+                    }}
+                >
+
                     <div style={styles.label}>
                         {"{ FAQ }"}
                     </div>
 
-                    <h2 style={styles.heading}>
+                    <h2
+                        style={{
+                            ...styles.heading,
+                            fontSize: isMobile ? "34px" : "48px",
+                        }}
+                    >
                         Clear Solutions to Your Concerns
                     </h2>
 
-                    <div style={styles.imageWrapper}>
-                        <img
-                            src="https://framerusercontent.com/images/QY6drXCswOtdH5g7g8gHn9nbx8.jpeg?width=960&height=1200"
-                            alt="faq"
-                            style={styles.image}
-                        />
-                    </div>
+                    {/* MOBILE IMAGE FIRST */}
+                    {isMobile && (
+                        <div
+                            style={{
+                                ...styles.imageWrapper,
+                                height: "320px",
+                                borderRadius: "24px",
+                            }}
+                        >
+                            <img
+                                src="https://framerusercontent.com/images/QY6drXCswOtdH5g7g8gHn9nbx8.jpeg?width=960&height=1200"
+                                alt="faq"
+                                style={styles.image}
+                            />
+                        </div>
+                    )}
+
+                    {/* DESKTOP IMAGE */}
+                    {!isMobile && (
+                        <div style={styles.imageWrapper}>
+                            <img
+                                src="https://framerusercontent.com/images/QY6drXCswOtdH5g7g8gHn9nbx8.jpeg?width=960&height=1200"
+                                alt="faq"
+                                style={styles.image}
+                            />
+                        </div>
+                    )}
+
                 </div>
 
                 {/* RIGHT SIDE */}
                 <div style={styles.right}>
                     {faqData.map((q, i) => {
+
                         const isOpen = i === active;
 
                         return (
@@ -64,12 +119,28 @@ export default function FAQ() {
                                     style={{
                                         ...styles.question,
                                         color: isOpen ? "#0ea5e9" : "#1a1a1a",
+                                        fontSize: isMobile ? "16px" : "18px",
+                                        alignItems: isMobile ? "flex-start" : "center",
                                     }}
                                     onClick={() => toggle(i)}
                                 >
-                                    <span>{q}</span>
+                                    <span
+                                        style={{
+                                            flex: 1,
+                                            paddingRight: "12px",
+                                            lineHeight: "1.5",
+                                        }}
+                                    >
+                                        {q}
+                                    </span>
 
-                                    <div style={styles.toggle}>
+                                    <div
+                                        style={{
+                                            ...styles.toggle,
+                                            width: isMobile ? "34px" : "38px",
+                                            height: isMobile ? "34px" : "38px",
+                                        }}
+                                    >
                                         <motion.div
                                             animate={{ rotate: isOpen ? 0 : 45 }}
                                             transition={{ duration: 0.3 }}
@@ -88,7 +159,12 @@ export default function FAQ() {
                                             transition={{ duration: 0.35 }}
                                             style={styles.answerWrap}
                                         >
-                                            <p style={styles.answer}>
+                                            <p
+                                                style={{
+                                                    ...styles.answer,
+                                                    fontSize: isMobile ? "15px" : "16px",
+                                                }}
+                                            >
                                                 This is a sample answer. Replace with real content.
                                             </p>
                                         </motion.div>
@@ -231,6 +307,7 @@ const styles = {
         alignItems: "center",
         justifyContent: "center",
         fontSize: "18px",
+        flexShrink: 0,
     },
 
     answerWrap: {
