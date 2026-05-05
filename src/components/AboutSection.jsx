@@ -32,7 +32,7 @@ function Counter({ value, suffix }) {
     }, [spring]);
 
     return (
-        <h2 className="text-5xl font-bold text-gray-800">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800">
             <span ref={ref}>{display}</span>
             <span className="text-[#07446F] ml-1">{suffix}</span>
         </h2>
@@ -45,15 +45,15 @@ export default function AboutSection() {
     return (
         <section
             id="aboutUs"
-            className="bg-white px-6 md:px-14 py-14 max-w-7xl mx-auto"
+            className="bg-white px-4 sm:px-6 md:px-14 py-10 md:py-14 max-w-7xl mx-auto overflow-hidden"
         >
             {/* Top Label */}
-            <p className="text-[#07446F] font-semibold text-sm tracking-widest mb-2 uppercase">
+            <p className="text-[#07446F] font-semibold text-xs sm:text-sm tracking-widest mb-2 uppercase">
                 &#123; who we are &#125;
             </p>
 
             {/* Heading */}
-            <h2 className="text-4xl md:text-6xl font-black text-gray-950 uppercase leading-tight mb-12">
+            <h2 className="text-3xl sm:text-4xl md:text-6xl font-black text-gray-950 uppercase leading-tight mb-8 md:mb-12">
                 We Build Digital Solutions That Drive Growth
             </h2>
 
@@ -65,23 +65,23 @@ export default function AboutSection() {
                     className="relative flex-[1.8] overflow-hidden shadow-2xl"
                     style={{
                         borderRadius: "24px",
-                        maxHeight: "620px",
+                        maxHeight: "680px",
                     }}
                 >
                     <img
                         src="https://ik.imagekit.io/psltlu4ds/Webzspot/Webzspot/Image%20Assets/dartboard-with-arrow-increasing-bar-graph-enhance-setup-business-objective-target-goal-concept-by-3d-render.jpg"
                         alt="WebzSpot Vision"
                         className="w-full h-full object-cover scale-105 hover:scale-110 transition-transform duration-500"
-                        style={{ maxHeight: "620px" }}
+                        style={{ maxHeight: "680px" }}
                     />
 
                     {/* VISION OVERLAY */}
-                    <div className="absolute top-6 left-6 right-6 z-10">
-                        <div className="bg-black/50 backdrop-blur-xl text-white p-6 rounded-2xl border border-white/20 shadow-lg">
-                            <h2 className="text-lg text-blue-200 border-b border-blue-300 font-semibold mb-3 pb-1">
+                    <div className="absolute top-3 sm:top-6 left-3 sm:left-6 right-3 sm:right-6 z-10">
+                        <div className="bg-black/50 backdrop-blur-xl text-white p-4 sm:p-6 rounded-2xl border border-white/20 shadow-lg">
+                            <h2 className="text-base sm:text-lg text-blue-200 border-b border-blue-300 font-semibold mb-3 pb-1">
                                 Vision & Mission
                             </h2>
-                            <p className="text-sm text-white/90 leading-relaxed">
+                            <p className="text-xs sm:text-sm text-white/90 leading-relaxed">
                                 At WebzSpot , we transform how businesses thrive in the digital age.
                                 We see technology as a seamless enabler of growth and efficiency,
                                 crafting solutions that unlock opportunities and ensure long-term success.
@@ -92,7 +92,7 @@ export default function AboutSection() {
                     </div>
 
                     {/* Floating Badge */}
-                    <div className="absolute bottom-0 left-0">
+                    <div className="absolute bottom-0 left-0 scale-75 sm:scale-100 origin-bottom-left">
                         <div>
                             <svg
                                 className="w-10 h-10 -ml-2"
@@ -168,7 +168,7 @@ export default function AboutSection() {
 
                     {/* STORY CARD */}
                     <div className="relative">
-                        <div className="bg-gray-100 relative p-4 rounded-2xl shadow-md text-gray-700 text-[15px] leading-relaxed">
+                        <div className="bg-gray-100 relative p-4 sm:p-5 rounded-2xl shadow-md text-gray-700 text-sm sm:text-[15px] leading-relaxed">
 
                             <div
                                 className="relative z-10 bg-white inline-block px-4 py-2 shadow-sm"
@@ -176,20 +176,16 @@ export default function AboutSection() {
                                     borderRadius: "18px",
                                 }}
                             >
-                                <h3 className="text-2xl font-bold text-gray-900">
+                                <h3 className="text-xl sm:text-2xl font-bold text-gray-900">
                                     moto
                                 </h3>
                             </div>
 
-                            <div className=" mt-2">
+                            <div className="mt-2">
                                 <p>
-                                    {/* We are a dynamic team of technology enthusiasts,
-                                    creative problem solvers, and dedicated professionals who are driven by a shared goal to help our clients succeed.
-                               */}
                                     We believe in transforming technology into a powerful asset that drives your success in the digital landscape.
                                     With personalized strategies and innovative approaches, we ensure that every step of your digital journey leads to enhanced efficiency, competitiveness, and long-term value.
                                     Partner with WebzSpot and elevate your business to new heights of digital excellence.
-
                                 </p>
                             </div>
 
@@ -206,26 +202,10 @@ export default function AboutSection() {
                             alt="WebzSpot Team"
                             className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                         />
-
-                        {/* MOTO OVERLAY */}
-                        {/* <div className="absolute bottom-4 left-4 right-4">
-                            <div className="bg-black/50 backdrop-blur-xl text-white p-4 rounded-2xl border border-white/20">
-                                <h2 className="text-lg text-blue-200 border-b border-blue-300 font-semibold mb-2 pb-1">
-                                    Moto
-                                </h2>
-                                <p className="text-xs text-white/90 leading-relaxed">
-                                    We believe in transforming technology into a powerful asset that drives your success in the digital landscape.
-                                    With personalized strategies and innovative approaches, we ensure that every step of your digital journey leads to enhanced efficiency, competitiveness, and long-term value.
-                                    Partner with WebzSpot and elevate your business to new heights of digital excellence.
-                                </p>
-                            </div>
-                        </div> */}
-
                     </div>
 
                 </div>
             </div>
-
         </section>
     );
 }

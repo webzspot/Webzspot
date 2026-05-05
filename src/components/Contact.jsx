@@ -20,21 +20,21 @@ const Contact = () => {
     return (
         <section
             id="contact"
-            className="relative overflow-hidden bg-[#eef8fd] py-28"
+            className="relative overflow-hidden bg-[#eef8fd] py-16 md:py-28"
         >
 
             {/* BACKGROUND */}
             <div className="absolute inset-0 pointer-events-none overflow-hidden">
 
-                <div className="absolute top-[-150px] left-[-120px] w-[450px] h-[450px] bg-cyan-300/30 rounded-full blur-[120px]" />
+                <div className="absolute top-[-100px] md:top-[-150px] left-[-80px] md:left-[-120px] w-[300px] md:w-[450px] h-[300px] md:h-[450px] bg-cyan-300/30 rounded-full blur-[120px]" />
 
-                <div className="absolute bottom-[-180px] right-[-120px] w-[500px] h-[500px] bg-blue-400/30 rounded-full blur-[140px]" />
+                <div className="absolute bottom-[-120px] md:bottom-[-180px] right-[-80px] md:right-[-120px] w-[320px] md:w-[500px] h-[320px] md:h-[500px] bg-blue-400/30 rounded-full blur-[140px]" />
 
-                <div className="absolute top-[40%] left-[45%] w-[300px] h-[300px] bg-sky-200/30 rounded-full blur-[100px]" />
+                <div className="absolute top-[40%] left-[45%] w-[200px] md:w-[300px] h-[200px] md:h-[300px] bg-sky-200/30 rounded-full blur-[100px]" />
 
             </div>
 
-            <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+            <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
                 {/* HEADER */}
                 <motion.div
@@ -52,7 +52,7 @@ const Contact = () => {
 
                     </div>
 
-                    <h1 className="mt-6 text-4xl lg:text-6xl font-bold text-[#063b60] leading-tight">
+                    <h1 className="mt-6 text-3xl sm:text-4xl lg:text-6xl font-bold text-[#063b60] leading-tight">
 
                         Transform Your Ideas
 
@@ -62,7 +62,7 @@ const Contact = () => {
 
                     </h1>
 
-                    <p className="mt-6 text-slate-600 text-lg max-w-3xl mx-auto leading-relaxed">
+                    <p className="mt-6 text-sm sm:text-base lg:text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
 
                         Reach out to us for personalized assistance, expert solutions,
                         and discover how WebzSpot can elevate your business online.
@@ -82,10 +82,10 @@ const Contact = () => {
 
                         <div className="absolute -bottom-32 -left-20 w-[350px] h-[350px] bg-blue-300/30 blur-[120px] rounded-full" />
 
-                        <div className="relative z-10 grid lg:grid-cols-[0.95fr_1.05fr]">
+                        <div className="relative z-10 grid grid-cols-1 lg:grid-cols-[0.95fr_1.05fr]">
 
                             {/* LEFT SIDE */}
-                            <div className="bg-gradient-to-br from-[#084b73] via-[#0b6698] to-[#1496d1] p-10 lg:p-14 text-white flex flex-col justify-between">
+                            <div className="bg-gradient-to-br from-[#084b73] via-[#0b6698] to-[#1496d1] p-6 sm:p-8 lg:p-14 text-white flex flex-col justify-between">
 
                                 <div>
 
@@ -245,8 +245,7 @@ const Contact = () => {
                                 initial={{ opacity: 0, y: 40 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.7 }}
-                                className="p-8 lg:p-14"
-                            >
+                                className="p-6 sm:p-8 lg:p-14"                            >
 
                                 <div className="max-w-2xl">
 
@@ -264,7 +263,7 @@ const Contact = () => {
                                     </p>
 
                                     {/* INPUTS */}
-                                    <div className="grid md:grid-cols-2 gap-5 mt-10">
+                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-10">
 
                                         <div>
 
@@ -367,7 +366,7 @@ const Contact = () => {
                                     </div>
 
                                     {/* BUTTON */}
-                                    <button className="group mt-10 w-full rounded-2xl bg-gradient-to-r from-sky-500 to-blue-600 py-5 text-white font-semibold shadow-xl hover:scale-[1.01] transition-all duration-300 flex items-center justify-center gap-3">
+                                    <button className="group mt-10 w-full rounded-2xl bg-gradient-to-r from-sky-500 to-blue-600 py-4 md:py-5 text-white font-semibold shadow-xl hover:scale-[1.01] transition-all duration-300 flex items-center justify-center gap-3">
 
                                         Submit Request
 

@@ -47,24 +47,27 @@ const projects = [
 
 export default function FeaturedProjects() {
     return (
-        <section id="services" className="bg-white pt-24 pb-10 px-6">
+        <section
+            id="services"
+            className="bg-white pt-16 md:pt-24 pb-10 px-4 sm:px-6"
+        >
             <div className="max-w-7xl mx-auto">
 
                 {/* Heading */}
-                <div className="mb-14 flex flex-col items-start w-fit mx-auto">
+                <div className="mb-10 md:mb-14 flex flex-col items-start w-full md:w-fit mx-auto">
 
-                    <h2 className="text-lg md:text-xl font-light text-[#07446F]">
+                    <h2 className="text-base sm:text-lg md:text-xl font-light text-[#07446F]">
                         {"{ Our Services }"}
                     </h2>
 
-                    <p className="text-black mt-5 font-bold text-2xl md:text-7xl leading-tight">
+                    <p className="text-black mt-4 md:mt-5 font-bold text-3xl sm:text-5xl md:text-7xl leading-tight">
                         Showcasing our most impactful work
                     </p>
 
                 </div>
 
                 {/* GRID */}
-                <div className="flex flex-col gap-10 relative">
+                <div className="flex flex-col gap-6 md:gap-10 relative">
 
                     {projects.map((project, i) => (
                         <motion.div
@@ -78,7 +81,7 @@ export default function FeaturedProjects() {
                                 delay: i * 0.12,
                             }}
                             viewport={{ once: true, amount: 0.3 }}
-                            className="group sticky top-10 mb-10 aspect-square rounded-2xl overflow-hidden h-100 lg:h-150 shadow-2xl"
+                            className="group sticky top-4 md:top-10 mb-6 md:mb-10 aspect-[4/5] sm:aspect-[16/10] lg:aspect-square rounded-2xl overflow-hidden h-[350px] sm:h-[450px] lg:h-150 shadow-2xl"
                         >
 
                             {/* IMAGE */}
@@ -92,9 +95,9 @@ export default function FeaturedProjects() {
                             <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/5 to-black/60" />
 
                             {/* TOP LEFT CONTENT */}
-                            <div className="absolute top-6 left-6 flex flex-col gap-3 z-10">
+                            <div className="absolute top-4 sm:top-6 left-4 sm:left-6 right-4 flex flex-col gap-2 sm:gap-3 z-10">
 
-                                <span className="bg-[#07446F] text-white text-sm font-semibold px-4 py-2 rounded-full w-fit shadow-md">
+                                <span className="bg-[#07446F] text-white text-xs sm:text-sm font-semibold px-3 sm:px-4 py-2 rounded-full w-fit shadow-md">
                                     {project.category}
                                 </span>
 
@@ -103,7 +106,7 @@ export default function FeaturedProjects() {
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5, delay: 0.1 }}
-                                    className="text-white text-2xl md:text-3xl font-bold leading-snug drop-shadow-lg"
+                                    className="text-white text-xl sm:text-2xl md:text-3xl font-bold leading-snug drop-shadow-lg"
                                 >
                                     {project.title}
                                 </motion.h3>
@@ -113,8 +116,7 @@ export default function FeaturedProjects() {
                                     initial={{ opacity: 0, y: 15 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5, delay: 0.25 }}
-                                    className="relative text-white/80 text-sm md:text-base max-w-md leading-relaxed pl-4 border-l-2 border-white/30
- backdrop-blur-sm"
+                                    className="relative text-white/80 text-xs sm:text-sm md:text-base max-w-md leading-relaxed pl-3 sm:pl-4 border-l-2 border-white/30 backdrop-blur-sm"
                                 >
                                     <span className="inline-block">
                                         {project.desc}
